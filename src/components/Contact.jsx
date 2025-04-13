@@ -43,7 +43,7 @@ import { toast } from "react-toastify";
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-stone-800 flex flex-col items-center justify-center px-4 py-10">
       <div className="max-w-xl w-full bg-white p-8 rounded-2xl shadow-lg">
-        <h2 className="text-3xl font-bold mb-4 text-gray-800">Let's Connect</h2>
+        <h2 className="text-3xl font-bold mb-4 text-gray-800">Hi, Let's Connect</h2>
         <p className="text-gray-600 mb-6">
           I'm open to freelance projects, job opportunities, or just a friendly chat. Just Email me I'll get back to you as soon as possible.
         </p>
