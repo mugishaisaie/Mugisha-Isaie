@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function DarkModeToggle() {
   const [isDark, setIsDark] = useState(() => {
@@ -18,7 +18,7 @@ function DarkModeToggle() {
   return (
     <button
       onClick={() => setIsDark((prev) => !prev)}
-      className={`transition-colors font-semibold text-2xl duration-300 ease-in-out ${isDark? 'bg-dark' :'bg-light'}` }
+      className={`flex-1 text-left transition-colors font-semibold text-2xl duration-300 ease-in-out ${isDark? 'bg-dark' :'bg-light'}` }
     >
       {isDark ? '☀' : '🌙'}
     </button>
