@@ -1,28 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPhp, FaGitAlt, FaGithub } from 'react-icons/fa';
-import { SiTailwindcss, SiRedux, SiSupabase, SiMysql, SiReactquery } from 'react-icons/si';
+import { techSkills } from '../data';
 
-const techSkills = [
-  { name: 'HTML5', icon: <FaHtml5 className="text-orange-600" />, level: 'Expert' },
-  { name: 'CSS3', icon: <FaCss3Alt className="text-blue-600" />, level: 'Expert' },
-  { name: 'JavaScript', icon: <FaJs className="text-yellow-500" />, level: 'Advanced' },
-  { name: 'React.js', icon: <FaReact className="text-cyan-400" />, level: 'Advanced' },
-  { name: 'React Query', icon: <SiReactquery className="text-pink-500" />, level: 'Advanced' },
-  { name: 'Redux', icon: <SiRedux className="text-purple-500" />, level: 'Advanced' },
-  { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-400" />, level: 'Advanced' },
-  { name: 'Supabase', icon: <SiSupabase className="text-green-600" />, level: 'Advanced' },
-  { name: 'PHP', icon: <FaPhp className="text-indigo-600" />, level: 'Advanced' },
-  { name: 'MySQL', icon: <SiMysql className="text-blue-500" />, level: 'Advanced' },
-  { name: 'Git', icon: <FaGitAlt className="text-red-600" />, level: 'Advanced' },
-  { name: 'GitHub', icon: <FaGithub className="text-gray-800 dark:text-white" />, level: 'Advanced' },
-];
+
 
 const softSkills = ['Problem Solving', 'Teamwork & Collaboration', 'Adaptability', 'Communication', 'Time Management', 'Continuous Learning'];
 
 const Skills = () => {
   return (
-    <section className="min-h-screen bg-white dark:bg-stone-900 px-6 md:px-20 py-16 text-stone-800 dark:text-stone-100">
+    <section className="min-h-screen bg-white dark:bg-stone-800 px-6 md:px-20 py-16 text-stone-800 dark:text-stone-100">
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2 
           initial={{ opacity: 0, y: -30 }} 
@@ -52,7 +38,7 @@ const Skills = () => {
           {techSkills.map((skill, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center justify-center gap-2 p-4 shadow-md rounded-xl bg-stone-100 dark:bg-stone-800 hover:scale-105 transition-transform duration-300"
+              className="flex flex-col items-center justify-center gap-2 p-4 shadow-md rounded-xl bg-stone-100 dark:bg-stone-700 hover:scale-105 transition-transform duration-300"
               variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
             >
               <div className="text-4xl">{skill.icon}</div>

@@ -1,7 +1,11 @@
+import React from 'react';
+
 import { nanoid } from 'nanoid';
 import IsaieHotelImg from './assets/images/isaie-hotel.png';
 import MyPizzasShopImg from './assets/images/my-pizzas-shop.png';
 import WorldWiseImg from './assets/images/worldwise-ap.png';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPhp, FaGitAlt, FaGithub, FaNodeJs, FaPython } from 'react-icons/fa';
+import { SiTailwindcss, SiRedux, SiSupabase, SiMysql, SiReactquery } from 'react-icons/si';
 export const links = [
   { id: nanoid(), to: 'about', text: 'about' },
   { id: nanoid(), to: 'skills', text: 'skills' },
@@ -51,4 +55,21 @@ export const projects = [
     github: "https://github.com/mugishaisaie/worldwise",
     image: WorldWiseImg,
   }
+];
+
+export const techSkills = [
+  { name: 'HTML5', icon: <FaHtml5 className="text-orange-600" />, level: 'Expert' },
+  { name: 'CSS3', icon: <FaCss3Alt className="text-blue-600" />, level: 'Expert' },
+  { name: 'JavaScript', icon: <FaJs className="text-yellow-500" />, level: 'Advanced' },
+  { name: 'React.js', icon: <FaReact className="text-cyan-400" />, level: 'Advanced' },
+  { name: 'React Query', icon: <SiReactquery className="text-pink-500" />, level: 'Advanced' },
+  { name: 'Redux', icon: <SiRedux className="text-purple-500" />, level: 'Advanced' },
+  { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-400" />, level: 'Advanced' },
+  { name: 'Supabase', icon: <SiSupabase className="text-green-600" />, level: 'Advanced' },
+  { name: 'PHP', icon: <FaPhp className="text-indigo-600" />, level: 'Advanced' },
+  { name: 'MySQL', icon: <SiMysql className="text-blue-500" />, level: 'Advanced' },
+  { name: 'NODE JS', icon: <FaNodeJs className="text-indigo-600" />, level: 'Intermediate' },
+  { name: 'PYTHON', icon: <FaPython className="text-blue-500" />, level: 'Intermediate' },
+  { name: 'Git', icon: <FaGitAlt className="text-red-600" />, level: 'Advanced' },
+  { name: 'GitHub', icon: <FaGithub className="text-gray-800 dark:text-white" />, level: 'Advanced' },
 ];
