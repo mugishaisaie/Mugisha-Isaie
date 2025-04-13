@@ -33,10 +33,11 @@ function Navbar() {
             >
               <FiX />
             </button>
-            <div className='w-full flex text-xm sm:hidden gap-4 mx-4 flex-1 bg-light capitalize text-sm text-stone-800 font-semibold dark:text-stone-100 dark:bg-dark'>
+            <div className='w-auto flex flex-col text-xm sm:hidden gap-4 mx-4  capitalize text-sm text-stone-800 font-semibold'>
         {links.map((link)=>{
             const{id,to,text} = link;
-         return   <NavLink to={to} key={id} className={({isActive})=> isActive ?'text-blue-600 border-b-2 border-blue-600 pb-1 font-semibold transition-all duration-300 ease-in-out': 'font-semibold hover:text-blue-500'} onClick={onToggle}>{text}</NavLink>
+         return   <NavLink to={to} key={id} className={({isActive})=> isActive ?'text-blue-600 w-fit  border-b-2 border-blue-600 pb-1 font-semibold transition-all duration-300 ease-in-out'
+      : 'font-semibold hover:text-blue-500 w-fit '} onClick={onToggle}>{text}</NavLink>
         })}
       </div>
             
