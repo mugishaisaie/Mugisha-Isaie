@@ -3,7 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer components{
+  .bg-light{
+   @apply  bg-stone-200 py-2 px-4 rounded-full
+  }
+  .bg-dark{
+   @apply  bg-stone-800 py-2 px-4 rounded-full
+  }
+ 
+}
 
 
 

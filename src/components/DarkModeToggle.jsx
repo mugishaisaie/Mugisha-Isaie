@@ -18,7 +18,7 @@ function DarkModeToggle() {
   return (
     <button
       onClick={() => setIsDark((prev) => !prev)}
-      className="ml-4 px-2 py-1 rounded bg-stone-700 text-black dark:bg-stone-700 dark:text-stone-100 transition-colors duration-300 ease-in-out"
+      className={`transition-colors font-semibold text-2xl duration-300 ease-in-out ${isDark? 'bg-dark' :'bg-light'}` }
     >
       {isDark ? '☀' : '🌙'}
     </button>

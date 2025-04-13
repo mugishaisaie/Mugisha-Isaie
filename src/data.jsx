@@ -10,13 +10,11 @@ import toursImg from './assets/images/tours.png'
 import imagesSplashImg from './assets/images/unsplash images.png'
 import questionImg from './assets/images/questions.png'
 export const links = [
-  { id: nanoid(), to: './', text: 'home' },
   { id: nanoid(), to: 'about', text: 'about' },
   { id: nanoid(), to: 'skills', text: 'skills' },
   { id: nanoid(), to: 'projects', text: 'projects' },
   { id: nanoid(), to: 'Experience', text: 'Experience' },
-  { id: nanoid(), to: 'Certifications', text: 'Certifications' },
-  { id: nanoid(), to: 'Education', text: 'Education' },
+  { id: nanoid(), to: 'article', text: 'article' },
   { id: nanoid(), to: 'Contact', text: 'Contact' },
 ];
 
