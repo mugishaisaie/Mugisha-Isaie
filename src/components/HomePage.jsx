@@ -1,9 +1,11 @@
+
 import { Link } from "react-router-dom";
 import homeImg from '../assets/coding.jpg'
+import React from "react";
 
 export default function HomePage() {
   return (
-    <main className="min-h-full bg-white dark:bg-stone-950 text-stone-800 dark:text-white px-6 md:px-20 py-16">
+    <div className="min-h-full bg-white dark:bg-stone-800 text-stone-800 dark:text-white px-6 md:px-10 py-10">
       
       {/* HERO SECTION */}
       <section className="flex flex-col md:flex-row items-center justify-between gap-10">
@@ -39,6 +41,6 @@ export default function HomePage() {
           />
         </div>
       </section>
-    </main>
+    </div>
   );
 }

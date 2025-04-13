@@ -10,7 +10,7 @@ function Navbar() {
     setToggle(!toggle)
   }
   return (
-    <div className='w-[70%] flex  justify-center space-x-3 sm:space-x-8 items-center  p-4 mx-8'>
+    <div className='w-full flex  justify-center space-x-3 sm:space-x-4 items-center py-4 dark:bg-stone-800'>
       <Header />
       <div className=' hidden sm:flex gap-4 mx-4 flex-1 bg-light capitalize text-sm text-stone-800 font-semibold dark:text-stone-100 dark:bg-dark'>
         {links.map((link)=>{
