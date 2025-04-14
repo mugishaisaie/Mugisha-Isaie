@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
-
+import { motion } from "framer-motion";
   export default function Contact() {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
     const [submitted, setSubmitted] = useState(false);
@@ -43,14 +43,31 @@ import { toast } from "react-toastify";
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-stone-800 flex flex-col items-center justify-center px-4 py-10">
       <div className="max-w-xl w-full bg-white p-8 rounded-2xl shadow-lg">
-        <h2 className="text-3xl font-bold mb-4 text-gray-800">Hi, Let's Connect</h2>
-        <p className="text-gray-600 mb-6">
+        <motion.h2
+        initial={{opacity:0,y: -30}}
+        animate={{opacity:1,y:0}}
+        transition={{duration:1,ease:"easeInOut"}}
+         className="text-3xl font-bold mb-4 text-gray-800">Hi, Let's Connect</motion.h2>
+        <motion.p
+                  initial={{opacity:0}}
+                  animate={{opacity:1}}
+                  transition={{duration:1,ease:"easeInOut",delay:0.3}}
+         className="text-gray-600 mb-6">
           I'm open to freelance projects, job opportunities, or just a friendly chat. Just Email me I'll get back to you as soon as possible.
-        </p>
-        <form onSubmit={handleSubmit} className="space-y-5">
+        </motion.p>
+        <motion.form onSubmit={handleSubmit} className="space-y-5"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        >
           <div>
             <label className="block text-sm font-medium text-gray-700">Name</label>
-            <input
+            <motion.input
+            placeholder="Your Name"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
               type="text"
               name="name"
               value={formData.name}
@@ -61,7 +78,11 @@ import { toast } from "react-toastify";
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700">Email</label>
-            <input
+            <motion.input
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5 }}
+            placeholder="Your Email"
               type="email"
               name="email"
               value={formData.email}
@@ -72,14 +93,19 @@ import { toast } from "react-toastify";
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700">Message</label>
-            <textarea
+            <motion.textarea
+            
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.8 }}
+            placeholder="Some Message"
               name="message"
               rows="4"
               value={formData.message}
               onChange={handleChange}
               required
               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-            ></textarea>
+            ></motion.textarea>
           </div>
           <button
             type="submit"
@@ -88,7 +114,7 @@ import { toast } from "react-toastify";
             Send Message
           </button>
           {submitted && <p className="text-green-600 mt-4">Thanks for reaching out!</p>}
-        </form>
+        </motion.form>
       </div>
     </div>
   );
