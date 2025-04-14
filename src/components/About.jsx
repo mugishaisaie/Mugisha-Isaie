@@ -1,8 +1,13 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import aboutImg from '../assets/Misaie.png'
 const About = () => {
   return (
-    <section className=" w-full h-auto md:flex gap-4 bg-stone-100  dark:bg-stone-800 text-stone-700 dark:text-stone-100 px-6 py-8 ">
+    <motion.section 
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    className=" w-full h-auto md:flex gap-4 bg-stone-100  dark:bg-stone-800 text-stone-700 dark:text-stone-100 px-6 py-8 ">
       <div>
         <img src={aboutImg} alt='Isaie Mugisha' className='h-auto w-auto rounded-full' />
       </div>
@@ -35,7 +40,7 @@ const About = () => {
         </div>
       </div>
       
-    </section>
+    </motion.section>
   );
 };
 

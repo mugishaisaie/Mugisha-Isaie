@@ -66,9 +66,9 @@ export default function HomePage() {
         {/* RIGHT SIDE IMAGE */}
         <div className="flex-1">
           <motion.img
-          initial={{opacity:0,y:50,scale:0,rotate:10}}
-          animate={{opacity:1,y:0,scale:1,rotate:0}}
-          transition={{duration:1.9,ease:"easeInOut"}}
+          initial={{opacity:0,y:50,scale:0,}}
+          animate={{opacity:1,y:0,scale:1,}}
+          transition={{duration:1.3,ease:"easeInOut"}}
             src={homeImg} 
             alt="Mugisha Isaie"
             className="w-full h-auto rounded-2xl shadow-lg"
