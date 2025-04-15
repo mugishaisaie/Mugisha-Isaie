@@ -27,7 +27,7 @@ function Navbar() {
       {toggle && <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50">
           {/* Modal Box */}
 
-          <div className="bg-white w-11/12 max-w-sm p-6 rounded-xl relative shadow-lg text-center space-y-6">
+          <div className="bg-white w-11/12  h-fit max-w-sm p-6 rounded-xl absolute top-4 right-4 shadow-lg text-center space-y-6">
             {/* Close Button */}
             <button
               onClick={onToggle}
@@ -37,9 +37,9 @@ function Navbar() {
             </button>
                 <AnimatePresence>
             <motion.div 
-            initial={{ x: "-100%", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: "100%", opacity: 0 }}
+            initial={{ y: "-100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: "100%", opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
             
             className='w-auto flex flex-col text-xm sm:hidden gap-4 mx-4  capitalize text-sm text-stone-800 font-semibold'>
