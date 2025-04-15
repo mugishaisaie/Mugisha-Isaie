@@ -1,5 +1,7 @@
 
-EmailJS
-Service ID -service_aj6ct4d
-template -template_mjfb5m7
-Public-key - 7-2SwqBk-vsqKuXDP
+Hello Guys
+
+I'm Isaie Mugisha Isaie web developer this is My portfolio
+
+i have built it with React js, Tailwind,Routers,Framer motion
+ for just showcasing some of my skills,projects and also experience
