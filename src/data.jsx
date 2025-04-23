@@ -42,19 +42,7 @@ export const projects = [
     github: "https://github.com/mugishaisaie/my-pizzas-shop",
     image: MyPizzasShopImg,
   },
-  {
-    title: "WorldWise Web App",
-    description: "A travel companion app to track your visited places on a map and store travel notes.",
-    tech: ["React.js", "Context API", "React Router", "Leaflet"],
-    features: [
-      "Interactive map with location markers",
-      "Add/edit/delete visited places",
-      "State management with Context API"
-    ],
-    live: "https://worldwise-app.vercel.app",
-    github: "https://github.com/mugishaisaie/worldwise",
-    image: WorldWiseImg,
-  }
+  
 ];
 
 export const techSkills = [
