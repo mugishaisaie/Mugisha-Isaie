@@ -30,7 +30,7 @@ export default function HomePage() {
           transition={{duration:1,ease:"easeInOut",delay:0.3}}
           
           className="text-lg md:text-xl text-stone-600 dark:text-stone-300">
-            A passionate <span className="font-semibold text-blue-500">Frontend Developer</span> building responsive, accessible, and real-world web applications using React, JavaScript, and Tailwind CSS.
+            A passionate <span className="font-semibold text-blue-500">Frontend Developer</span> building responsive, accessible, modern,user friendly real-world web applications using React, JavaScript, and Tailwind CSS.
           </motion.p>
           <div
           

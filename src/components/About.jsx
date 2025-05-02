@@ -17,7 +17,7 @@ const About = () => {
         </h2>
 
         <p className="text-lg leading-relaxed mb-6">
-          I'm a <strong>Mugisha Isaie </strong> <span className="font-semibold text-blue-600 dark:text-blue-400">Creative and detail-oriented Front End Engineer / JavaScript Developer</span> with solid hands-on experience in building responsive Single Page Applications (SPA) and user-friendly web applications using <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, <strong>React.js</strong>, <strong>React Query</strong>, <strong>Redux</strong>, <strong>Supabase</strong>, <strong>SQL</strong>, <strong>PHP</strong>, and <strong>Tailwind CSS</strong>.
+         Hi, I'm a <strong>Mugisha Isaie </strong> <span className="font-semibold text-blue-600 dark:text-blue-400">Creative and detail-oriented Front End Engineer / JavaScript Developer</span> with solid hands-on experience in building responsive Single Page Applications (SPA) and user-friendly web applications using <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, <strong>React.js</strong>, <strong>React Query</strong>, <strong>Redux</strong>, <strong>Supabase</strong>, <strong>SQL</strong>, <strong>PHP</strong>, and <strong>Tailwind CSS</strong>.
         </p>
 
         <p className="text-lg leading-relaxed mb-6">
