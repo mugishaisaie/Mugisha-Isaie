@@ -1,9 +1,8 @@
 import React from 'react';
 
 import { nanoid } from 'nanoid';
-import IsaieHotelImg from './assets/images/isaie-hotel.png';
-import MyPizzasShopImg from './assets/images/my-pizzas-shop.png';
-import WorldWiseImg from './assets/images/worldwise-ap.png';
+import IsaieHotelImg from './assets/images/isaie_Hotel.png';
+import MyPizzasShopImg from './assets/images/pizza-app-img.png';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPhp, FaGitAlt, FaGithub, FaNodeJs, FaPython } from 'react-icons/fa';
 import { SiTailwindcss, SiRedux, SiSupabase, SiMysql, SiReactquery } from 'react-icons/si';
 export const links = [

@@ -23,7 +23,7 @@ export default function Projects() {
             <motion.img
                       initial={{opacity:0,y:50,scale:0}}
                       animate={{opacity:1,y:0,scale:1,}}
-                      transition={{duration:1,ease:"easeInOut"}} src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+                      transition={{duration:1,ease:"easeInOut"}} src={project.image} alt={project.title} className="w-full h-48 object-contain" />
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
               <p className="dark:text-stone-200 mb-4">{project.description}</p>
