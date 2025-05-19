@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import homeImg from '../assets/coding.jpg'
+import homeImg from '../assets/isaie.png'
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -57,7 +57,7 @@ export default function HomePage() {
           
             src={homeImg} 
             alt="Mugisha Isaie"
-            className="w-full h-auto rounded-2xl shadow-lg"
+            className="w-full h-100 rounded-full shadow-lg"
           />
         </div>
       </section>
