@@ -13,7 +13,7 @@ export default function HomePage() {
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, ease: "easeOut" }} 
     
-    className="min-h-full bg-white dark:bg-stone-800 text-stone-800 dark:text-white px-6 md:px-10 py-10">
+    className="min-h-full bg-white dark:bg-stone-800 text-stone-800 dark:text-white px-6 md:px-10 py-10 mb-20">
       
       {/* HERO SECTION */}
       <section className="flex flex-col md:flex-row items-center justify-between gap-10">
@@ -56,7 +56,11 @@ export default function HomePage() {
           />
         </div>
       </section>
+    <div>
+      <h2>My Latest Blogs</h2>
+    </div>
     </motion.div>
+
 </>
   );
 }
