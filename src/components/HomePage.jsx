@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import homeImg from '../assets/isaie.png'
 import React from "react";
 import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa6";
 
 export default function HomePage() {
   return (
+    <>
     <motion.div
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
@@ -22,32 +24,25 @@ export default function HomePage() {
           initial={{opacity:0,y: -30}}
           animate={{opacity:1,y:0}}
           transition={{duration:1,ease:"easeInOut"}}>
-            Hi, I'm Mugisha Isaie
+            Hi, I'm Mugisha Isaie 
           </motion.h1>
           <motion.p 
           initial={{opacity:0}}
           animate={{opacity:1}}
           transition={{duration:1,ease:"easeInOut",delay:0.3}}
-          
+             
           className="text-lg md:text-xl text-stone-600 dark:text-stone-300">
-            A passionate <span className="font-semibold text-blue-500">Frontend Developer</span> building responsive, accessible, modern,user friendly real-world web applications using React, JavaScript, and Tailwind CSS.
+            I’m a passionate Rwandan <span className="font-semibold text-blue-500 text-2xl">Web Developer and Instructor </span> who loves learning and building responsive, user-friendly applications. I specialize in   <strong>JavaScript and its frameworks like React </strong>, along with modern <strong>CSS tools such as Tailwind.</strong>, I enjoy creating projects that solve real problems and make a positive impact in my community
           </motion.p>
           <div
           
           
-           className="flex flex-col gap-4 sm:flex-row sm:gap-6">
-            <Link to="/projects">
-              <button 
-        className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-                View Projects
-              </button>
-            </Link>
-            <Link to="/contact">
-              <button 
-        className="border border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-50 transition">
-                Contact Me
-              </button>
-            </Link>
+           className="flex flex-col gap-4 text-center justify-center sm:flex-row sm:gap-6">
+            <p>Follow me here</p>
+         <Link to="https://github.com/mugishaisaie"><FaGithub className="text-2xl rounded-lg"/></Link>
+         <Link to="https://www.linkedin.com/in/mugisha-isaie/"><FaLinkedin className="text-2xl bg-blue-800 text-stone-50 p-1 rounded-lg"/></Link>
+         <Link to="https://www.youtube.com/@mugishaisaie1"><FaYoutube className="text-2xl bg-red-600 text-stone-50 p-1 rounded-lg"/></Link>
+          
           </div>
         </div>
 
@@ -62,5 +57,6 @@ export default function HomePage() {
         </div>
       </section>
     </motion.div>
+</>
   );
 }

@@ -6,7 +6,7 @@ import MyPizzasShopImg from './assets/images/pizza-app-img.png';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPhp, FaGitAlt, FaGithub, FaNodeJs, FaPython } from 'react-icons/fa';
 import { SiTailwindcss, SiRedux, SiSupabase, SiMysql, SiReactquery } from 'react-icons/si';
 export const links = [
-  { id: nanoid(), to: '/', text: 'home' },
+  
   { id: nanoid(), to: 'about', text: 'about' },
   { id: nanoid(), to: 'skills', text: 'skills' },
   { id: nanoid(), to: 'projects', text: 'projects' },

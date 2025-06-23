@@ -17,7 +17,15 @@ const About = () => {
         </h2>
 
         <p className="text-lg leading-relaxed mb-6">
-         Hi, I'm a <strong>Mugisha Isaie </strong> <span className="font-semibold text-blue-600 dark:text-blue-400">Creative and detail-oriented Front End Engineer / JavaScript Developer</span> with solid hands-on experience in building responsive Single Page Applications (SPA) and user-friendly web applications using <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, <strong>React.js</strong>, <strong>React Query</strong>, <strong>Redux</strong>, <strong>Supabase</strong>, <strong>SQL</strong>, <strong>PHP</strong>, and <strong>Tailwind CSS</strong>.
+        Hi Dear . ✨ I'm Mugisha Isaie — <strong>Web Developer & Instructor</strong> from Rwanda
+Based in Rwanda, I’m a passionate web developer and instructor dedicated to creating engaging, responsive, and user-friendly web applications. I spend most of my time building projects with HTML, CSS, JavaScript, and diving deep into powerful tools like React, Tailwind CSS, and other modern frameworks.
+ <br /> <br />
+What drives me is the joy of solving real-world problems through code and the constant opportunity to learn something new in this fast-evolving tech world.
+
+But I’m not just a developer — I’m also a teacher at heart. Through my content on YouTube and other platforms, I help aspiring developers—especially in Africa—learn practical coding skills that open doors to global opportunities.
+<br /><br /> I focus on real projects, not just theory, because I believe hands-on experience is the best way to learn.
+
+When I’m not coding or teaching, I’m exploring new technologies, improving my skills, and working on building a stronger tech community here in Rwanda..
         </p>
 
         <p className="text-lg leading-relaxed mb-6">
