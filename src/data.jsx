@@ -11,6 +11,7 @@ export const links = [
   { id: nanoid(), to: 'skills', text: 'skills' },
   { id: nanoid(), to: 'projects', text: 'projects' },
   { id: nanoid(), to: 'Contact', text: 'Contact' },
+  { id: nanoid(), to: 'blogs', text: 'Blogs' },
 ];
 
 
