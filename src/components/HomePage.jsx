@@ -1,9 +1,10 @@
 
 import { Link } from "react-router-dom";
-import homeImg from '../assets/isaie.png'
+import homeImg from '../assets/Misaie.png'
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa6";
+import HowDeveloper from "./HowDeveloper";
 
 export default function HomePage() {
   return (
@@ -13,7 +14,7 @@ export default function HomePage() {
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, ease: "easeOut" }} 
     
-    className="min-h-full bg-white dark:bg-stone-800 text-stone-800 dark:text-white px-6 md:px-10 py-10 mb-20">
+    className="min-h-full bg-white dark:bg-stone-800 text-stone-800 dark:text-white px-6 md:px-10 py-10">
       
       {/* HERO SECTION */}
       <section className="flex flex-col md:flex-row items-center justify-between gap-10">
@@ -47,22 +48,18 @@ export default function HomePage() {
         </div>
 
         {/* RIGHT SIDE IMAGE */}
-        <div className="flex-1">
+        <div className="flex-1 border-5 ">
           <img
           
             src={homeImg} 
             alt="Mugisha Isaie"
-            className="w-full h-100 rounded-full shadow-lg"
+            className=" px-4 w-full h-100 rounded-full shadow-lg border-4 border-blue-500 object-cover"
           />
         </div>
       </section>
-    <div>
-      <h2>My Latest Blogs</h2>
-
-      <h3>Learn With Me</h3>
-
-    </div>
     </motion.div>
+    {/* Who Isaie Is How he found him self in world of web */}
+    <HowDeveloper />
 
 </>
   );
