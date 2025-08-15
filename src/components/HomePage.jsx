@@ -32,7 +32,7 @@ export default function HomePage() {
           transition={{duration:1,ease:"easeInOut",delay:0.3}}
              
           className="text-lg md:text-xl text-stone-600 dark:text-stone-300">
-            I’m a passionate Rwandan <span className="font-semibold text-blue-500 text-2xl">Web Developer and Instructor </span> who loves learning and building responsive, user-friendly applications. I specialize in   <strong>JavaScript and its frameworks like React </strong>, along with modern <strong>CSS tools such as Tailwind.</strong>, I enjoy creating projects that solve real problems and make a positive impact in my community
+            passionate Rwandan <span className="font-semibold text-blue-500 text-2xl">Web Developer and Instructor </span> who loves learning and building responsive, user-friendly applications. I specialize in   <strong>JavaScript and its frameworks like React </strong>, along with modern <strong>CSS tools such as Tailwind.</strong>, I enjoy creating projects that solve real problems and make a positive impact in my community
           </motion.p>
           <div
           
@@ -58,6 +58,9 @@ export default function HomePage() {
       </section>
     <div>
       <h2>My Latest Blogs</h2>
+
+      <h3>Learn With Me</h3>
+
     </div>
     </motion.div>
 

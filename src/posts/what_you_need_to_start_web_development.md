@@ -1,3 +1,9 @@
+
+title:"Tools you need to start web development"
+date: "2025-06-22"
+excerpt:"in this post i was explaining /telling people who want to start web development what basic tools you need"
+
+
 # Iby'ingenzi Ukeneye Ugatangira Kwiga Web Development 
 
 ![Web Development](/thumbnails/1.jpg)
