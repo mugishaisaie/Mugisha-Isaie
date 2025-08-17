@@ -3,12 +3,12 @@ import React from 'react'
 function HowDeveloper() {
   return (
     <div>
-        <h2 className='font-sans text-center capitalize font-bold ml-10 text-2xl'>Who is Me | How i found my Self into World of web</h2>
+        <h2 className='font-sans text-center capitalize font-bold ml-10 text-sm sm:text-2xl'>Who is Me | How i found my Self into World of web</h2>
       <div className='w-full flex flex-col items-center text-center justify-center'>
 
         <div className='m-4 sm:m-8 px-4 sm:px-10 lg:px-20 max-w-3xl'>
-          <h4>Who is Isaie</h4>
-    <p>
+          <h4 className='font-semi-bold bg-stone-200 text-blue-700 inline-block p-2'>Who is Isaie</h4>
+    <p className='bg-stone-100 p-2 rounded-lg mt-2'>
       My name is <strong>Mugisha Isaie</strong>.  
       I’m the firstborn in my family and a strong believer in God.  
       My goal is to <mark>learn</mark> and grow every day—whether it’s figuring out how to live the best life possible or how to become a better web developer.
@@ -17,8 +17,8 @@ function HowDeveloper() {
         </div>
 
         <div className='px-4 sm:px-8 lg:px-16 max-w-4xl'>
-          <h4>My Journey Into Web Development</h4>
-          <p>
+          <h4 className='m-4 font-semibold bg-blue-200 inline-block p-2 rounded-md'>My Journey Into Web Development</h4>
+          <p className='bg-stone-100 p-2 rounded-lg italic'>
 
     Like many children, I grew up with big dreams. Mine was to become a doctor so I could help others, because I have always been a kind person who genuinely cares about people in need. My father, however, always encouraged me to explore and go deeper into technology.
 
