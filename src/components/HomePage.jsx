@@ -35,16 +35,7 @@ export default function HomePage() {
           className="text-lg md:text-xl text-stone-600 dark:text-stone-300">
             passionate Rwandan <span className="font-semibold text-blue-500 text-2xl">Web Developer and Instructor </span> who loves learning and building responsive, user-friendly applications. I specialize in   <strong>JavaScript and its frameworks like React </strong>, along with modern <strong>CSS tools such as Tailwind.</strong>, I enjoy creating projects that solve real problems and make a positive impact in my community
           </motion.p>
-          <div
-          
-          
-           className="flex flex-col gap-4 text-center justify-center sm:flex-row sm:gap-6">
-            <p>Follow me here</p>
-         <Link to="https://github.com/mugishaisaie"><FaGithub className="text-2xl rounded-lg"/></Link>
-         <Link to="https://www.linkedin.com/in/mugisha-isaie/"><FaLinkedin className="text-2xl bg-blue-800 text-stone-50 p-1 rounded-lg"/></Link>
-         <Link to="https://www.youtube.com/@mugishaisaie1"><FaYoutube className="text-2xl bg-red-600 text-stone-50 p-1 rounded-lg"/></Link>
-          
-          </div>
+         
         </div>
 
         {/* RIGHT SIDE IMAGE */}
@@ -53,8 +44,19 @@ export default function HomePage() {
           
             src={homeImg} 
             alt="Mugisha Isaie"
-            className=" px-4 w-full h-100 rounded-full shadow-lg border-4 border-blue-500 object-cover"
+            className=" px-4 w-full h-100 rounded-full shadow-lg border-4 border-white-900 "
           />
+{/* Follow me section */}
+           <div
+          
+          
+           className="flex  gap-4 text-center mt-4 justify-center sm:flex-row sm:gap-6">
+            <p>Follow me here</p>
+         <Link to="https://github.com/mugishaisaie"><FaGithub className="text-2xl rounded-lg"/></Link>
+         <Link to="https://www.linkedin.com/in/mugisha-isaie/"><FaLinkedin className="text-2xl bg-blue-800 text-stone-50 p-1 rounded-lg"/></Link>
+         <Link to="https://www.youtube.com/@mugishaisaie1"><FaYoutube className="text-2xl bg-red-600 text-stone-50 p-1 rounded-lg"/></Link>
+          
+          </div>
         </div>
       </section>
     </motion.div>
