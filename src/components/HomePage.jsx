@@ -4,7 +4,7 @@ import homeImg from '../assets/Misaie.png'
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa6";
-import HowDeveloper from "./HowDeveloper";
+import HowDeveloper from "./services";
 
 export default function HomePage() {
   return (
@@ -60,7 +60,7 @@ export default function HomePage() {
         </div>
       </section>
     </motion.div>
-    {/* Who Isaie Is How he found him self in world of web */}
+    
     <HowDeveloper />
 
 </>
