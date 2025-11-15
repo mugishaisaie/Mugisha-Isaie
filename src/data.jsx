@@ -76,7 +76,7 @@ export const testimonials = [
   {
     id:1,
     image:"",
-    name: "Obalde Ishimwe",
+    name: "Empunga Mwangi",
     message:"I finally understood JavaScript because of your teaching style."
   },
   {
@@ -88,19 +88,19 @@ export const testimonials = [
   {
     id:1,
     image:"",
-    name: "Irakoze From Youtube" ,
+    name: "Vumbura Student" ,
     message:"Your guidance showed me how to start making money with my skills."
   },
   {
     id:1,
     image:"",
-    name: "Irakoze From Youtube" ,
+    name: "AbduNour " ,
     message:"Ewana boy komereza aho ngaho kabisa nanjye nk'umuntu wize computer science ibi ni ibintu uvuga nkabyumva gatanu kandi kandi ukomeje kumfasha man💯💯💯💯💯💯"
   },
   {
     id:1,
     image:"",
-    name: "Irakoze From Youtube" ,
+    name: "Nelson Jude" ,
     message:"I love how you teach step-by-step; you make coding feel possible."},
   {
     id:1,
