@@ -1,10 +1,17 @@
 import React from 'react';
 
 import { nanoid } from 'nanoid';
-import IsaieHotelImg from './assets/images/isaie_Hotel.png';
-import MyPizzasShopImg from './assets/images/pizza-app-img.png';
+import IsaieHotelImg from './assets/project-images/isaie_Hotel.png';
+import MyPizzasShopImg from './assets/project-images/pizza-app-img.png';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPhp, FaGitAlt, FaGithub, FaNodeJs, FaPython } from 'react-icons/fa';
 import { SiTailwindcss, SiRedux, SiSupabase, SiMysql, SiReactquery } from 'react-icons/si';
+
+
+
+// services images
+import webdeveloper from '../src/assets/images/Web development.png'
+import webdevInstructor from '../src/assets/images/Web & App Development Instructor.jpg'
+import webMentor from '../src/assets/images/Mentorship & Tech Consulting.png'
 export const links = [
   
   { id: nanoid(), to: 'about', text: 'about' },
@@ -14,6 +21,96 @@ export const links = [
   { id: nanoid(), to: 'blogs', text: 'Blogs' },
 ];
 
+
+
+export const   services = [
+  {
+    id: 1,
+    title: "Web & App Development",
+    image: webdeveloper,
+    description:
+      "I build modern, fast, and responsive web applications using React, Tailwind, Node.js, and cloud technologies. My focus is clean code, performance, and real problem solving.",
+    cta: "See Projects"
+  },
+
+  {
+    id: 2,
+    title: "Web Development Instructor",
+    image: webdevInstructor,
+    description:
+      "I teach HTML, CSS, JavaScript, and modern frameworks with a clear step-by-step approach that helps beginners understand not just code — but real programming logic. that helps in real world solving problems",
+    cta: "Start Learning"
+  },
+
+  {
+    id: 3,
+    title: "Mentorship & Tech Consulting",
+    image: webMentor,
+    description:
+      "I guide new developers in building strong web development Skills, choosing the right learning paths, and How to Learn Perfect and Get Job(How to be SUccessful in web development) ",
+    cta: "Book a Session"
+  },
+];
+
+
+export const testimonials = [
+  {
+    id:1,
+    image:"",
+    name: "Patric",
+    message:"Mugisha, the way you explain coding makes everything simple!",
+  },
+  
+  {
+    id:2,
+    image:"",
+    name: "Light Roger",
+    message:"Mugisha, the way you explain coding makes everything simple!",
+  },
+  {
+    id:1,
+    image:"",
+    name: "Obalde Ishimwe",
+    message:"Your videos changed my confidence as a beginner."
+  },
+  {
+    id:1,
+    image:"",
+    name: "Obalde Ishimwe",
+    message:"I finally understood JavaScript because of your teaching style."
+  },
+  {
+    id:1,
+    image:"",
+    name: "Irakoze From Youtube" ,
+    message:"Thank you for helping me build my first real website!"
+  },
+  {
+    id:1,
+    image:"",
+    name: "Irakoze From Youtube" ,
+    message:"Your guidance showed me how to start making money with my skills."
+  },
+  {
+    id:1,
+    image:"",
+    name: "Irakoze From Youtube" ,
+    message:"Ewana boy komereza aho ngaho kabisa nanjye nk'umuntu wize computer science ibi ni ibintu uvuga nkabyumva gatanu kandi kandi ukomeje kumfasha man💯💯💯💯💯💯"
+  },
+  {
+    id:1,
+    image:"",
+    name: "Irakoze From Youtube" ,
+    message:"I love how you teach step-by-step; you make coding feel possible."},
+  {
+    id:1,
+    image:"",
+    name: "ElSodja" ,
+    message:" Thanks For Your Training Sir! 🙏, Ni Ibyagaciro Kukugira Kbs"
+  },
+
+  
+]
 
 export const projects = [
   {

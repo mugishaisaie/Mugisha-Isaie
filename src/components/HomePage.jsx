@@ -1,10 +1,12 @@
 
 import { Link } from "react-router-dom";
-import homeImg from '../assets/Misaie.png'
-import React from "react";
+// import homeImg from '../assets/images'
+import homeImg from '../assets/images/Isaie_blessing.jpg'
+// import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa6";
-import HowDeveloper from "./services";
+import Services from "./services";
+import Testimonials from "./testimonials";
 
 export default function HomePage() {
   return (
@@ -38,30 +40,31 @@ export default function HomePage() {
          
         </div>
 
-        {/* RIGHT SIDE IMAGE */}
+        
         <div className="flex-1 border-5 ">
           <img
           
             src={homeImg} 
             alt="Mugisha Isaie"
-            className=" px-4 w-full h-100 rounded-full shadow-lg border-4 border-white-900 "
+            className=" px-4 w-md h-100 rounded-full shadow-lg border-4 border-white-900 "
           />
 {/* Follow me section */}
-           <div
+            <div
           
           
            className="flex  gap-2 text-center mt-4 justify-center sm:flex-row sm:gap-2">
-            <p className="font-medium sm: text-sm">Follow me here</p>
-         <Link to="https://github.com/mugishaisaie"><FaGithub className="text-2xl rounded-lg"/></Link>
+            <p className="font-medium sm: text-sm">Follow me here</p> 
+          <Link to="https://github.com/mugishaisaie"><FaGithub className="text-2xl rounded-lg"/></Link> 
          <Link to="https://www.linkedin.com/in/mugisha-isaie/"><FaLinkedin className="text-2xl bg-blue-800 text-stone-50 p-1 rounded-lg"/></Link>
-         <Link to="https://www.youtube.com/@mugishaisaie1"><FaYoutube className="text-2xl bg-red-600 text-stone-50 p-1 rounded-lg"/></Link>
+         <Link to="https://www.youtube.com/@mugishaisaie1"><FaYoutube className="text-2xl bg-red-600 text-stone-50 p-1 rounded-lg"/></Link> 
           
-          </div>
+           </div> 
         </div>
       </section>
     </motion.div>
     
-    <HowDeveloper />
+    <Services />
+    <Testimonials />
 
 </>
   );

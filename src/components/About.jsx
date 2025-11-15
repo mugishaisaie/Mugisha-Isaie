@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import aboutImg from '../assets/Misaie.png'
+import aboutImg from '../assets/images/Misaie.png'
 const About = () => {
   return (
     <motion.section 
