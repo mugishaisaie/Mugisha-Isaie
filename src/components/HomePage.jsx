@@ -50,7 +50,7 @@ My mission is to help people build skills, create opportunities, and grow in the
           
             src={homeImg} 
             alt="Mugisha Isaie"
-            className=" px-4 w-md h-100 rounded-full shadow-lg border-4 border-white-900 "
+            className=" px-4 w-30 h-30 rounded-full shadow-lg "
           />
 {/* Follow me section */}
             <div

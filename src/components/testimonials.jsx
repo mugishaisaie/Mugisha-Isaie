@@ -16,7 +16,7 @@ export default function Testimonials() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % testimonials.length);
-    }, 10000);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, []);
@@ -41,7 +41,7 @@ export default function Testimonials() {
               <img
                 src={
                   testimonials[index].image ||
-                  `https://api.dicebear.com/7.x/avataaars/svg?seed=${testimonials[index].name}`
+                  `https://api.dicebear.com/9.x/adventurer/svg?seed=${testimonials[index].name}`
                 }
                 alt={testimonials[index].name}
                 className="w-20 h-20 rounded-full mb-4"
