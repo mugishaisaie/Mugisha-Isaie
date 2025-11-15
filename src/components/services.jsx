@@ -34,7 +34,7 @@ export default function ServicesSection() {
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-24 h-24 object-contain mb-4"
+                className="w-54 h-40 object-contain mb-4"
               />
 
               <h3 className="text-xl font-semibold mb-3">{service.title}</h3>

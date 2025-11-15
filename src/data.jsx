@@ -9,7 +9,7 @@ import { SiTailwindcss, SiRedux, SiSupabase, SiMysql, SiReactquery } from 'react
 
 
 // services images
-import webdeveloper from '../src/assets/images/Web development.png'
+import webdeveloper from '../src/assets/images/Full-Stack Web & App Development.png'
 import webdevInstructor from '../src/assets/images/Web & App Development Instructor.jpg'
 import webMentor from '../src/assets/images/Mentorship & Tech Consulting.png'
 export const links = [
