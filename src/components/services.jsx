@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { services } from "../data"; 
+import { Link } from "react-router-dom";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -43,9 +44,9 @@ export default function ServicesSection() {
                 {service.description}
               </p>
 
-              <button className="mt-auto bg-black text-white px-5 py-2 rounded-full hover:bg-gray-800 transition">
+              <Link to={'/contact'} className="mt-auto bg-black text-white px-5 py-2 rounded-full hover:bg-gray-800 transition">
                 {service.cta}
-              </button>
+              </Link>
             </motion.div>
           ))}
         </div>
