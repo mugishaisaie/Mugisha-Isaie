@@ -27,7 +27,7 @@ export default function HomePage() {
           initial={{opacity:0,y: -30}}
           animate={{opacity:1,y:0}}
           transition={{duration:1,ease:"easeInOut"}}>
-            Hi, I'm Mugisha Isaie 
+            Hi, I'm Mugisha Isaie  Full-Stack Web Developer | Instructor | Mentor
           </motion.h1>
           <motion.p 
           initial={{opacity:0}}
@@ -35,7 +35,11 @@ export default function HomePage() {
           transition={{duration:1,ease:"easeInOut",delay:0.3}}
              
           className="text-lg md:text-xl text-stone-600 dark:text-stone-300">
-            passionate Rwandan <span className="font-semibold text-blue-500 text-2xl">Web Developer and Instructor </span> who loves learning and building responsive, user-friendly applications. I specialize in   <strong>JavaScript and its frameworks like React </strong>, along with modern <strong>CSS tools such as Tailwind.</strong>, I enjoy creating projects that solve real problems and make a positive impact in my community
+          Hey I'm  a Full-Stack Web Developer and Instructor focused on building modern, high-performance web applications and teaching a modern web development in a clear, practical way. I specialize in React, JavaScript, Node.js, and Tailwind CSS, with a strong emphasis on clean architecture, real-world logic, and problem-solving.
+
+I’m committed to helping beginners — especially in Rwanda and across Africa — understand programming deeply, not by memorizing code, but by learning how to think like developers. My teaching style is simple, structured, and highly appreciated by students.
+
+My mission is to help people build skills, create opportunities, and grow in the digital world — from building their first website to starting a tech career.
           </motion.p>
          
         </div>
@@ -56,7 +60,7 @@ export default function HomePage() {
             <p className="font-medium sm: text-sm">Follow me here</p> 
           <Link to="https://github.com/mugishaisaie"><FaGithub className="text-2xl rounded-lg"/></Link> 
          <Link to="https://www.linkedin.com/in/mugisha-isaie/"><FaLinkedin className="text-2xl bg-blue-800 text-stone-50 p-1 rounded-lg"/></Link>
-         <Link to="https://www.youtube.com/@mugishaisaie1"><FaYoutube className="text-2xl bg-red-600 text-stone-50 p-1 rounded-lg"/></Link> 
+         <Link to="https://www.youtube.com/@MITECH_Rwanda"><FaYoutube className="text-2xl bg-red-600 text-stone-50 p-1 rounded-lg"/></Link> 
           
            </div> 
         </div>
