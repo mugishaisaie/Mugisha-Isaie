@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <h2 className="text-xl font-semibold">Mugisha Isaie</h2>
           <p className="text-sm text-stone-500 dark:text-stone-400">
-            Frontend Developer | Passionate about building real-world apps
+            Full Stack Web developer and Instructor | Passionate about building real-world apps
           </p>
         </div>
 
@@ -31,7 +31,7 @@ export default function Footer() {
 
       {/* Bottom text */}
       <div className="text-center text-sm mt-6 text-stone-500 dark:text-stone-500">
-        © {new Date().getFullYear()} Mugisha Isaie. All rights reserved.
+        © {new Date().getFullYear()} Mugisha Isaie Fullstack Developer and Instructor. All rights reserved.
       </div>
     </footer>
   );

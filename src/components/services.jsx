@@ -14,13 +14,13 @@ const cardVariants = {
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-white dark:bg-stone-800 text-stone-800 dark:text-white">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           My Services
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 bg-white dark:bg-stone-800 text-stone-800 dark:text-white">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -30,7 +30,7 @@ export default function ServicesSection() {
               whileInView="visible"
               viewport={{ once: true }}
               whileHover={{ scale: 1.03 }}
-              className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center"
+              className="  bg-white dark:bg-stone-800 text-stone-800 dark:text-stone-100 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center"
             >
               <img
                 src={service.image}
@@ -40,7 +40,7 @@ export default function ServicesSection() {
 
               <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
 
-              <p className="text-gray-600 mb-6">
+              <p className="text-stone-300 mb-6">
                 {service.description}
               </p>
 

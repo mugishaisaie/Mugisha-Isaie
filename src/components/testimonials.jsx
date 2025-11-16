@@ -22,13 +22,13 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="py-20">
+    <section className="py-20 bg-white dark:bg-stone-800 text-stone-800 dark:text-white">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-10">
           Testimonials
         </h2>
 
-        <div className="relative h-56">
+        <div className="relative bg-white dark:bg-stone-800 text-stone-800 dark:text-white h-56">
           <AnimatePresence>
             <motion.div
               key={index}
@@ -47,7 +47,7 @@ export default function Testimonials() {
                 className="w-20 h-20 rounded-full mb-4"
               />
 
-              <p className="text-lg text-gray-700 italic mb-3">
+              <p className="text-lg bg-white dark:bg-stone-800 text-stone-800 dark:text-white italic mb-3">
                 “{testimonials[index].message}”
               </p>
 
@@ -65,7 +65,7 @@ export default function Testimonials() {
               key={i}
               onClick={() => setIndex(i)}
               className={`w-3 h-3 rounded-full ${
-                index === i ? "bg-black" : "bg-gray-300"
+                index === i ? "bg-black" : "bg-stone-300"
               }`}
             />
           ))}

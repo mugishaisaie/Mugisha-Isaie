@@ -41,18 +41,18 @@ import { motion } from "framer-motion";
   
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-stone-800 flex flex-col items-center justify-center px-4 py-10">
-      <div className="max-w-xl w-full bg-white p-8 rounded-2xl shadow-lg">
+    <div className="min-h-screen bg-white dark:bg-stone-800 text-stone-800 dark:text-white flex flex-col items-center justify-center px-4 py-10">
+      <div className="max-w-xl w-full bg-white dark:bg-stone-800 text-stone-800 dark:text-white p-8 rounded-2xl shadow-lg">
         <motion.h2
         initial={{opacity:0,y: -30}}
         animate={{opacity:1,y:0}}
         transition={{duration:1,ease:"easeInOut"}}
-         className="text-3xl font-bold mb-4 text-gray-800">Hi, Let's Connect</motion.h2>
+         className="text-3xl font-bold mb-4 bg-white dark:bg-stone-800  dark:text-stone-300">Hi, Let's Connect</motion.h2>
         <motion.p
                   initial={{opacity:0}}
                   animate={{opacity:1}}
                   transition={{duration:1,ease:"easeInOut",delay:0.3}}
-         className="text-gray-600 mb-6">
+         className="bg-white dark:bg-stone-800 text-stone-800 dark:text-white mb-6">
           I'm open to freelance projects, job opportunities, or just a friendly chat. Just Email me I'll get back to you as soon as possible.
         </motion.p>
         <motion.form onSubmit={handleSubmit} className="space-y-5"
@@ -62,7 +62,7 @@ import { motion } from "framer-motion";
         viewport={{ once: true }}
         >
           <div>
-            <label className="block text-sm font-medium text-gray-700">Name</label>
+            <label className="block text-sm font-medium bg-white dark:bg-stone-800 text-stone-800 dark:text-white">Name</label>
             <motion.input
             placeholder="Your Name"
             initial={{ opacity: 0, x: -30 }}
@@ -77,7 +77,7 @@ import { motion } from "framer-motion";
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Email</label>
+            <label className="block text-sm font-medium bg-white dark:bg-stone-800 text-stone-800 dark:text-white">Email</label>
             <motion.input
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -92,7 +92,7 @@ import { motion } from "framer-motion";
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Message</label>
+            <label className="block text-sm font-medium bg-white dark:bg-stone-800 text-stone-800 dark:text-white">Message</label>
             <motion.textarea
             
             initial={{ opacity: 0, x: -30 }}
