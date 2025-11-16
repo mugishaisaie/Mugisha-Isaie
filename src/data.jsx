@@ -38,7 +38,7 @@ export const   services = [
     title: "Web Development Instructor",
     image: webdevInstructor,
     description:
-      "I teach HTML, CSS, JavaScript, and modern frameworks with a clear step-by-step approach that helps beginners understand not just code — but real programming logic. that helps in real world solving problems",
+      "I teach HTML, CSS, JavaScript, React js, Tailwind Css and Node js for Backend with a clear step-by-step approach that helps beginners understand not just code  — but real programming logic. that helps in real world solving problems",
     cta: "Start Learning"
   },
 
