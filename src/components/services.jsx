@@ -40,7 +40,7 @@ export default function ServicesSection() {
 
               <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
 
-              <p className="text-stone-300 mb-6">
+              <p className="dark:text-stone-300 mb-6">
                 {service.description}
               </p>
 
