@@ -47,6 +47,14 @@ When I’m not coding or teaching, I’m exploring new technologies, improving m
           </a>
         </div>
       </div>
+
+      <section>
+        <h2> Education</h2>
+        <div>
+          <h3> Software Development  <span>201 - 2024</span> </h3>
+          <p></p>
+        </div>
+      </section>
       
     </motion.section>
   );
