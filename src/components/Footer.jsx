@@ -95,9 +95,8 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-1">
-             <span>Made with</span>
-             <FaHeart className="text-red-500 animate-pulse" />
-             <span>in Rwanda</span>
+             <span>Web Developer | Digital Solutionist</span>
+             
           </div>
 
         </div>
