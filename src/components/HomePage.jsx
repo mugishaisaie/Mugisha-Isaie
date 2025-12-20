@@ -1,75 +1,121 @@
-
-import { Link } from "react-router-dom";
-// import homeImg from '../assets/images'
-import homeImg from '../assets/images/Isaie_blessing.jpg'
-// import React from "react";
+import React from "react";
+import { Link } from "react-router-dom"; // Keep for internal links (like to /contact)
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaYoutube, FaTwitter } from "react-icons/fa6";
 import Services from "./services";
 import Testimonials from "./testimonials";
+
+// --- TEMPLATE CONFIGURATION ---
+// Ideally, this data would come from a separate data file, but for the template, 
+// we keep it here so the user sees exactly where to edit.
+const portfolioContent = {
+  name: "Mugisha Isaie",
+  title: "Full-Stack Web Developer | Content Creator| Instructor",
+  bio: "I am a passionate developer focused on building modern, high-performance web applications. I specialize in React, Node.js, and clean architecture. My mission is to help businesses grow in the digital world through scalable and efficient code.",
+  // Use a placeholder image or instruction on how to import their own
+  imagePath: "https://placehold.co/400x400/292524/white?text=Your+Photo", 
+  socials: {
+    github: "https://github.com/",
+    linkedin: "https://linkedin.com/",
+    youtube: "https://youtube.com/",
+  }
+};
 
 export default function HomePage() {
   return (
     <>
-    <motion.div
-    initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, ease: "easeOut" }} 
-    
-    className="min-h-full bg-white dark:bg-stone-800 text-stone-800 dark:text-white px-6 md:px-10 py-10">
-      
-      {/* HERO SECTION */}
-      <section className="flex flex-col md:flex-row items-center justify-between gap-10">
-        
-        {/* LEFT SIDE TEXT */}
-        <div className="flex-1 space-y-6">
-          <motion.h1 className="text-4xl md:text-6xl font-bold leading-tight"
-          initial={{opacity:0,y: -30}}
-          animate={{opacity:1,y:0}}
-          transition={{duration:1,ease:"easeInOut"}}>
-            Hi, I'm Mugisha Isaie  Full-Stack Web Developer | Instructor | Mentor
-          </motion.h1>
-          <motion.p 
-          initial={{opacity:0}}
-          animate={{opacity:1}}
-          transition={{duration:1,ease:"easeInOut",delay:0.3}}
-             
-          className="text-lg md:text-xl text-stone-600 dark:text-stone-300">
-          Hey I'm  a Full-Stack Web Developer and Instructor focused on building modern, high-performance web applications and teaching a modern web development in a clear, practical way. I specialize in React, JavaScript, Node.js, and Tailwind CSS, with a strong emphasis on clean architecture, real-world logic, and problem-solving.
-
-I’m committed to helping beginners — especially in Rwanda and across Africa — understand programming deeply, not by memorizing code, but by learning how to think like developers. My teaching style is simple, structured, and highly appreciated by students.
-
-My mission is to help people build skills, create opportunities, and grow in the digital world — from building their first website to starting a tech career.
-          </motion.p>
-         
-        </div>
-
-        
-        <div className="flex-1 border-5 ">
-          <img
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="min-h-screen flex flex-col justify-center bg-white dark:bg-stone-900 text-stone-800 dark:text-stone-100 px-6 md:px-16 py-12"
+      >
+        {/* HERO SECTION */}
+        <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 max-w-7xl mx-auto w-full">
           
-            src={homeImg} 
-            alt="Mugisha Isaie"
-            className=" px-4 w-30 h-30 rounded-full shadow-lg "
-          />
-{/* Follow me section */}
-            <div
-          
-          
-           className="flex  gap-2 text-center mt-4 justify-center sm:flex-row sm:gap-2">
-            <p className="font-medium sm: text-sm">Follow me here</p> 
-          <Link to="https://github.com/mugishaisaie"><FaGithub className="text-2xl rounded-lg"/></Link> 
-         <Link to="https://www.linkedin.com/in/mugisha-isaie/"><FaLinkedin className="text-2xl bg-blue-800 text-stone-50 p-1 rounded-lg"/></Link>
-         <Link to="https://www.youtube.com/@MITECH_Rwanda"><FaYoutube className="text-2xl bg-red-600 text-stone-50 p-1 rounded-lg"/></Link> 
-          
-           </div> 
-        </div>
-      </section>
-    </motion.div>
-    
-    <Services />
-    <Testimonials />
+          {/* LEFT SIDE: TEXT & CTA */}
+          <div className="flex-1 space-y-6 text-center md:text-left">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <h2 className="text-xl text-stone-500 dark:text-stone-400 font-medium mb-2">
+                Hello, I am
+              </h2>
+              <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
+                {portfolioContent.name}
+              </h1>
+              <h3 className="text-2xl md:text-3xl text-stone-600 dark:text-stone-300 font-semibold mt-2">
+                {portfolioContent.title}
+              </h3>
+            </motion.div>
 
-</>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 0.4 }}
+              className="text-lg md:text-xl text-stone-600 dark:text-stone-400 leading-relaxed max-w-2xl mx-auto md:mx-0"
+            >
+              {portfolioContent.bio}
+            </motion.p>
+
+            {/* CALL TO ACTION BUTTONS (Crucial for Business) */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4"
+            >
+              <Link to="/projects" className="px-8 py-3 bg-stone-800 dark:bg-white text-white dark:text-stone-900 font-bold rounded-full hover:scale-105 transition-transform shadow-lg">
+                View My Work
+              </Link>
+              <Link to="/contact" className="px-8 py-3 border-2 border-stone-800 dark:border-white font-bold rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+                Contact Me
+              </Link>
+            </motion.div>
+
+            {/* SOCIAL PROOF */}
+            <motion.div 
+               initial={{ opacity: 0 }}
+               animate={{ opacity: 1 }}
+               transition={{ delay: 0.8 }}
+               className="flex gap-4 mt-8 justify-center md:justify-start items-center"
+            >
+              <span className="text-sm font-medium uppercase tracking-wider text-stone-500">Connect:</span>
+              <div className="flex gap-3">
+                <a href={portfolioContent.socials.github} target="_blank" rel="noopener noreferrer" className="p-2 bg-stone-100 dark:bg-stone-800 rounded-lg hover:text-blue-600 transition-colors">
+                  <FaGithub className="text-2xl" />
+                </a>
+                <a href={portfolioContent.socials.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 bg-stone-100 dark:bg-stone-800 rounded-lg hover:text-blue-700 transition-colors">
+                  <FaLinkedin className="text-2xl" />
+                </a>
+                <a href={portfolioContent.socials.youtube} target="_blank" rel="noopener noreferrer" className="p-2 bg-stone-100 dark:bg-stone-800 rounded-lg hover:text-red-600 transition-colors">
+                  <FaYoutube className="text-2xl" />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* RIGHT SIDE: IMAGE */}
+          <div className="flex-1 flex justify-center md:justify-end relative">
+             {/* Decorative blob behind image */}
+            <div className="absolute top-0 right-10 w-72 h-72 bg-blue-200 dark:bg-stone-700 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
+            
+            <motion.img
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              src={portfolioContent.imagePath}
+              alt={portfolioContent.name}
+              className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl shadow-2xl rotate-3 hover:rotate-0 transition-all duration-500 border-4 border-white dark:border-stone-800"
+            />
+          </div>
+        </section>
+      </motion.div>
+
+      <Services />
+      <Testimonials />
+    </>
   );
 }

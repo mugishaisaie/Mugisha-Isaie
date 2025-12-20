@@ -1,71 +1,99 @@
-"use client";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { testimonials } from "../data";
+import { FaQuoteLeft } from "react-icons/fa"; // Requires react-icons
 
 const slideVariants = {
-  hidden: { opacity: 0, x: 40 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
-  exit: { opacity: 0, x: -40, transition: { duration: 0.6 } },
+  hidden: { opacity: 0, x: 50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  exit: { opacity: 0, x: -50, transition: { duration: 0.5, ease: "easeIn" } },
 };
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false); // New state to pause slider
 
-  // Auto-slide every 10 seconds
+  // Auto-slide logic (Runs only if not paused)
   useEffect(() => {
+    if (isPaused) return; 
+
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % testimonials.length);
-    }, 3000);
+    }, 8000); // INCREASED to 8 seconds for readability
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isPaused]); // Dependency on isPaused
 
   return (
-    <section className="py-20 bg-white dark:bg-stone-800 text-stone-800 dark:text-white">
-      <div className="max-w-3xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">
-          Testimonials
-        </h2>
+    <section className="py-24 bg-stone-100 dark:bg-stone-900 text-stone-800 dark:text-stone-100 overflow-hidden">
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        
+        {/* Section Header */}
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-5xl font-bold mb-12 tracking-tight"
+        >
+          Success Stories
+        </motion.h2>
 
-        <div className="relative bg-white dark:bg-stone-800 text-stone-800 dark:text-white h-56">
-          <AnimatePresence>
+        {/* Testimonial Card */}
+        <div 
+          className="relative min-h-[400px] md:min-h-[300px] flex items-center justify-center"
+          onMouseEnter={() => setIsPaused(true)} // Pause when user hovers
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <AnimatePresence mode="wait">
             <motion.div
               key={index}
               variants={slideVariants}
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="absolute inset-0 flex flex-col items-center"
+              className="absolute inset-0 flex flex-col items-center justify-center"
             >
-              <img
-                src={
-                  testimonials[index].image ||
-                  `https://api.dicebear.com/9.x/adventurer/svg?seed=${testimonials[index].name}`
-                }
-                alt={testimonials[index].name}
-                className="w-20 h-20 rounded-full mb-4"
-              />
+              {/* Decorative Quote Icon */}
+              <FaQuoteLeft className="text-4xl text-blue-200 dark:text-stone-700 mb-6" />
 
-              <p className="text-lg bg-white dark:bg-stone-800 text-stone-800 dark:text-white italic mb-3">
-                “{testimonials[index].message}”
+              <p className="text-lg md:text-2xl font-medium leading-relaxed max-w-2xl mb-8 text-stone-700 dark:text-stone-300">
+                "{testimonials[index].message}"
               </p>
 
-              <h4 className="text-xl font-semibold">
-                {testimonials[index].name}
-              </h4>
+              {/* User Info */}
+              <div className="flex items-center gap-4">
+                <img
+                  src={
+                    testimonials[index].image ||
+                    `https://api.dicebear.com/9.x/initials/svg?seed=${testimonials[index].name}`
+                  }
+                  alt={testimonials[index].name}
+                  className="w-14 h-14 rounded-full border-2 border-white dark:border-stone-700 shadow-md"
+                />
+                <div className="text-left">
+                  <h4 className="text-lg font-bold text-stone-900 dark:text-white">
+                    {testimonials[index].name}
+                  </h4>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 font-medium">
+                    {testimonials[index].role || "Client"} {/* Fallback if role is missing */}
+                  </p>
+                </div>
+              </div>
             </motion.div>
           </AnimatePresence>
         </div>
 
-        {/* navigation dots */}
-        <div className="flex justify-center gap-2 mt-6">
+        {/* Navigation Dots */}
+        <div className="flex justify-center gap-3 mt-8">
           {testimonials.map((_, i) => (
             <button
               key={i}
               onClick={() => setIndex(i)}
-              className={`w-3 h-3 rounded-full ${
-                index === i ? "bg-black" : "bg-stone-300"
+              aria-label={`Go to testimonial ${i + 1}`}
+              className={`h-3 rounded-full transition-all duration-300 ${
+                index === i 
+                ? "w-8 bg-blue-600" // Active dot is wider
+                : "w-3 bg-stone-300 dark:bg-stone-700 hover:bg-stone-400"
               }`}
             />
           ))}
@@ -73,4 +101,4 @@ export default function Testimonials() {
       </div>
     </section>
   );
-}
+} 
