@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaYoutube, FaTwitter } from "react-icons/fa6";
 import Services from "./services";
 import Testimonials from "./testimonials";
+import HomeImg from '../assets/images/Isaie_blessing.jpg'
 
 // --- TEMPLATE CONFIGURATION ---
 // Ideally, this data would come from a separate data file, but for the template, 
@@ -13,7 +14,7 @@ const portfolioContent = {
   title: "Full-Stack Web Developer | Content Creator| Instructor",
   bio: "I am a passionate developer focused on building modern, high-performance web applications. I specialize in React, Node.js, and clean architecture. My mission is to help businesses grow in the digital world through scalable and efficient code.",
   // Use a placeholder image or instruction on how to import their own
-  imagePath: "https://placehold.co/400x400/292524/white?text=Your+Photo", 
+  imagePath: HomeImg, 
   socials: {
     github: "https://github.com/",
     linkedin: "https://linkedin.com/",
