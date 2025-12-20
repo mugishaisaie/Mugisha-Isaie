@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaGraduationCap, FaDownload, FaCode } from "react-icons/fa6";
 import aboutImg from '../assets/images/mugisha Isaie.jpg'
+import Certifications from "./Certifications";
 
 // --- TEMPLATE DATA ---
 // Move this to data.js in a real app, but kept here for easy editing
@@ -137,6 +138,8 @@ const About = () => {
 
         </motion.div>
       </div>
+
+      <Certifications />
     </section>
   );
 };
