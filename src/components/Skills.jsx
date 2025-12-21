@@ -10,7 +10,10 @@ const softSkills = [
   'Adaptability', 
   'Communication', 
   'Time Management', 
-  'Continuous Learning'
+  'Continuous Learning',
+  'Hard working',
+  
+ 
 ];
 
 const containerVariants = {
