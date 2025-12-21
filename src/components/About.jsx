@@ -30,9 +30,9 @@ const aboutData = {
     "Currently finishing my degree at IPRC Tumba, I combine academic rigor with real-world agility. I don't just write code; I engineer solutions."
   ],
   stats: [
-    { label: "Students Taught", value: "500+", icon: <FaLaptopCode /> },
-    { label: "Projects Shipped", value: "15+", icon: <FaCode /> },
-    { label: "Years Coding", value: "3+", icon: <FaRocket /> },
+    { label: "Students Taught", value: "1000+", icon: <FaLaptopCode /> },
+    { label: "Projects Shipped", value: "100+", icon: <FaCode /> },
+    { label: "Years Coding", value: "4+", icon: <FaRocket /> },
   ],
   techStack: [
     { icon: <SiMongodb size={24} />, name: "MongoDB", color: "text-green-500" },
