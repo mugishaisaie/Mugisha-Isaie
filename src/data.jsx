@@ -9,9 +9,9 @@ import { SiTailwindcss, SiRedux, SiSupabase, SiMysql, SiReactquery } from 'react
 
 
 // services images
-import webdeveloper from '../src/assets/images/Full-Stack Web & App Development.png'
-import webdevInstructor from '../src/assets/images/Web & App Development Instructor.jpg'
-import webMentor from '../src/assets/images/Mentorship & Tech Consulting.png'
+import webdeveloper from '../src/assets/images/Developer.jpg'
+import webdevInstructor from '../src/assets/images/Instructor.jpg'
+import webMentor from '../src/assets/images/Mentor.jpg'
 export const links = [
   
   { id: nanoid(), to: 'about', text: 'about' },

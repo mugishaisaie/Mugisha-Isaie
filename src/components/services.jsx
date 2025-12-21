@@ -60,13 +60,13 @@ export default function ServicesSection() {
             >
               
               {/* IMAGE / ICON CONTAINER */}
-              <div className="mb-6 w-16 h-16 flex items-center justify-center bg-blue-50 dark:bg-stone-800 rounded-xl group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+              <div className="mb-6 w-auto h-auto flex items-center justify-center bg-blue-50 dark:bg-stone-800 rounded-xl group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                 {/* Check if it's an image URL or a React Icon component */}
                 {typeof service.image === 'string' ? (
                    <img
                    src={service.image}
                    alt={service.title}
-                   className="w-10 h-10 object-contain"
+                   className="w-auto h-auto object-contain"
                  />
                 ) : (
                   // Fallback if you decide to use React Icons in data.js later
