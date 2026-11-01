@@ -91,10 +91,6 @@ export default function Contact({ isStandalone = false }) {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 mb-4">
-            <FaEnvelope className="w-3.5 h-3.5" />
-            <span>Start a Conversation</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-stone-900 dark:text-white">
             Have a Project, Opportunity or Technical Challenge? Let's Talk.
           </h2>
@@ -121,7 +117,7 @@ export default function Contact({ isStandalone = false }) {
                   <FaEnvelope className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400">
                     Email (Primary)
                   </h4>
                   <a 
@@ -130,7 +126,7 @@ export default function Contact({ isStandalone = false }) {
                   >
                     {personalInfo.email}
                   </a>
-                  <p className="text-xs text-stone-500 dark:text-stone-400 mt-0.5">
+                  <p className="text-xs text-stone-600 dark:text-stone-400 mt-0.5">
                     Responses within 24 hours
                   </p>
                 </div>
@@ -142,7 +138,7 @@ export default function Contact({ isStandalone = false }) {
                   <FaWhatsapp className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400">
                     WhatsApp & Phone
                   </h4>
                   <a 
@@ -154,7 +150,7 @@ export default function Contact({ isStandalone = false }) {
                     <span>{personalInfo.phoneFormatted}</span>
                     <FaArrowUpRightFromSquare className="w-3 h-3" />
                   </a>
-                  <p className="text-xs text-stone-500 dark:text-stone-400 mt-0.5">
+                  <p className="text-xs text-stone-600 dark:text-stone-400 mt-0.5">
                     Direct chat for commercial inquiries & urgent collaboration
                   </p>
                 </div>
@@ -166,13 +162,13 @@ export default function Contact({ isStandalone = false }) {
                   <FaLocationDot className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400">
                     Location & Timezone
                   </h4>
                   <p className="text-sm sm:text-base font-bold text-stone-900 dark:text-white">
                     {personalInfo.location}
                   </p>
-                  <p className="text-xs text-stone-500 dark:text-stone-400 mt-0.5">
+                  <p className="text-xs text-stone-600 dark:text-stone-400 mt-0.5">
                     Central Africa Time (CAT / UTC+2) • Open to remote worldwide
                   </p>
                 </div>
@@ -194,7 +190,7 @@ export default function Contact({ isStandalone = false }) {
 
             {/* Social / Professional Profiles Card */}
             <div className="bg-white dark:bg-stone-800/80 rounded-2xl p-6 border border-stone-200 dark:border-stone-700 shadow-sm">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-4">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 mb-4">
                 Verified Online Profiles
               </h4>
               <div className="flex flex-wrap gap-3">
@@ -238,7 +234,7 @@ export default function Contact({ isStandalone = false }) {
                 <h3 className="text-2xl font-bold text-stone-900 dark:text-white">
                   Send a Direct Message
                 </h3>
-                <p className="text-xs sm:text-sm text-stone-500 dark:text-stone-400 mt-1">
+                <p className="text-xs sm:text-sm text-stone-600 dark:text-stone-400 mt-1">
                   Fill in your details below and I will get back to you promptly.
                 </p>
               </div>
@@ -264,8 +260,8 @@ export default function Contact({ isStandalone = false }) {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    placeholder="e.g. John Doe / Tech Rwanda"
-                    className="w-full px-4 py-3 rounded-xl text-sm bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-white placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                    placeholder="e.g. Patrick Mugabo or Acme Tech"
+                    className="w-full min-h-[44px] px-4 py-3 rounded-xl text-sm bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-white placeholder-stone-500 dark:placeholder-stone-400 hover:border-stone-300 dark:hover:border-stone-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
                   />
                 </div>
 
@@ -282,7 +278,7 @@ export default function Contact({ isStandalone = false }) {
                     onChange={handleChange}
                     required
                     placeholder="name@company.com"
-                    className="w-full px-4 py-3 rounded-xl text-sm bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-white placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                    className="w-full min-h-[44px] px-4 py-3 rounded-xl text-sm bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-white placeholder-stone-500 dark:placeholder-stone-400 hover:border-stone-300 dark:hover:border-stone-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
                   />
                 </div>
 
@@ -296,7 +292,7 @@ export default function Contact({ isStandalone = false }) {
                     name="inquiryType"
                     value={formData.inquiryType}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl text-sm bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                    className="w-full min-h-[44px] px-4 py-3 rounded-xl text-sm bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-white hover:border-stone-300 dark:hover:border-stone-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
                   >
                     <option value="Full-time Employment">Full-time Developer Hiring (Junior Full-Stack / Frontend / React)</option>
                     <option value="Freelance Web App">Freelance Web Application / SPA</option>
@@ -320,7 +316,7 @@ export default function Contact({ isStandalone = false }) {
                     onChange={handleChange}
                     required
                     placeholder="Describe your project, timeline, target role, or engineering challenge..."
-                    className="w-full px-4 py-3 rounded-xl text-sm bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-white placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-y"
+                    className="w-full px-4 py-3 rounded-xl text-sm bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-white placeholder-stone-500 dark:placeholder-stone-400 hover:border-stone-300 dark:hover:border-stone-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors resize-y"
                   />
                 </div>
 
@@ -328,7 +324,7 @@ export default function Contact({ isStandalone = false }) {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/25 transition-all disabled:opacity-60 disabled:cursor-not-allowed hover:scale-[1.01]"
+                  className="w-full min-h-[48px] inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white shadow-lg shadow-blue-500/25 transition-colors disabled:opacity-60 disabled:cursor-not-allowed focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                 >
                   {isLoading ? (
                     <>

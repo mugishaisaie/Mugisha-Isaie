@@ -6,7 +6,6 @@ import AmbaraImg from './assets/project-images/Ambara.png';
 import ElectroHubImg from './assets/project-images/electrohub.png';
 import MitechHubImg from './assets/project-images/mitechhub.png';
 import InjizaSmmImg from './assets/project-images/injizasmm.png';
-import TuraImg from './assets/project-images/tura-system.jpg';
 
 // Tech Icons from react-icons/fa6 and react-icons/si
 import { 
@@ -116,7 +115,7 @@ export const projects = [
     summary: "Commercial web platform architected for automated digital marketing campaigns, order dispatching, and audience growth fulfillment across East Africa.",
     problem: "Content creators, brands, and businesses across East Africa lacked a secure, automated local platform to configure, purchase, and track digital promotion campaigns without excessive service friction.",
     solution: "Engineered a high-performance commercial web portal featuring service catalog filtering, dynamic campaign configuration, order status tracking, and automated service workflows.",
-    role: "Lead Full-Stack Developer & Systems Architect — designed the architecture, front-facing UI, order flow workflows, and managed custom domain DNS and SSL configuration.",
+    role: "Lead Full-Stack Developer & Systems Architect: designed the architecture, front-facing UI, order flow workflows, and managed custom domain DNS and SSL configuration.",
     tech: ["JavaScript (ES6+)", "Full-Stack Web Architecture", "Responsive UI/UX", "REST API", "DNS & SSL"],
     features: [
       "Dynamic social media service catalog and pricing tiers",
@@ -145,7 +144,7 @@ export const projects = [
     summary: "High-converting online footwear retail platform featuring interactive shoe catalog filtering, real-time cart calculations, and a frictionless WhatsApp-integrated checkout workflow.",
     problem: "Traditional Rwandan retail shoe merchants face steep cart abandonment when using foreign credit card checkout gateways that local shoppers do not use.",
     solution: "Engineered a frictionless retail store where customers filter shoes by size and style, assemble a real-time cart, and complete orders via an automated WhatsApp dispatch format.",
-    role: "Frontend & E-Commerce Developer — engineered the complete shopping experience, interactive filtering, state management, and WhatsApp payload generation.",
+    role: "Frontend & E-Commerce Developer: engineered the complete shopping experience, interactive filtering, state management, and WhatsApp payload generation.",
     tech: ["React.js", "Tailwind CSS", "WhatsApp Business API", "Context API", "Local Storage", "Vercel"],
     features: [
       "Dynamic shoe catalog with category, style, and size filtering",
@@ -174,7 +173,7 @@ export const projects = [
     summary: "End-to-end hotel booking and operations management application integrating a Supabase PostgreSQL backend, authentication, and optimistic server-state synchronization with React Query.",
     problem: "Hospitality managers need an intuitive, responsive operations dashboard to manage cabin inventory, monitor reservations, handle guest check-ins/check-outs, and analyze occupancy without complex enterprise software.",
     solution: "Built an end-to-end full-stack dashboard and booking application integrating Supabase authentication, PostgreSQL tables with Row-Level Security, and automated state caching via React Query.",
-    role: "Full-Stack Engineer — built the UI architecture, state management layer, Supabase database schemas, and data mutation pipelines.",
+    role: "Full-Stack Engineer: built the UI architecture, state management layer, Supabase database schemas, and data mutation pipelines.",
     tech: ["React.js", "Supabase", "PostgreSQL", "React Query", "Redux Toolkit", "Styled Components", "React Router"],
     features: [
       "Cabin CRUD operations with image uploads and pricing policies",
@@ -203,7 +202,7 @@ export const projects = [
     summary: "Mobile-first digital storefront engineered for apparel and fashion retail, featuring responsive product filtering, dynamic cart calculations, and instant WhatsApp Business checkout dispatch.",
     problem: "Boutique fashion sellers in East Africa require an elegant storefront that presents apparel collections effectively while eliminating foreign payment gateway frictions.",
     solution: "Engineered a high-speed fashion e-commerce storefront with intuitive catalog filtering, size selection, shopping cart management, and automated WhatsApp order dispatch.",
-    role: "Full-Stack Developer — built the frontend application, responsive layouts, shopping cart calculations, and localized WhatsApp checkout.",
+    role: "Full-Stack Developer: built the frontend application, responsive layouts, shopping cart calculations, and localized WhatsApp checkout.",
     tech: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "Context API", "WhatsApp Business Integration"],
     features: [
       "Interactive apparel catalog with size and style selection",
@@ -231,7 +230,7 @@ export const projects = [
     summary: "Electronics e-commerce storefront featuring technical specification comparisons, stock status displays, and instant WhatsApp ordering for tech buyers.",
     problem: "Electronics retailers need a structured catalog displaying granular device specifications (RAM, storage, processor) alongside transparent local pricing and quick ordering.",
     solution: "Engineered a dedicated electronics retail storefront highlighting product comparison sheets, technical specifications, and one-tap checkout.",
-    role: "Full-Stack Developer — designed the component hierarchy, specification sheets, and responsive shopping cart.",
+    role: "Full-Stack Developer: designed the component hierarchy, specification sheets, and responsive shopping cart.",
     tech: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "Context API", "WhatsApp Checkout"],
     features: [
       "Granular technical specification sheets for electronics and gadgets",
@@ -259,7 +258,7 @@ export const projects = [
     summary: "Central digital agency platform for MITECH HUB (mitechhubhq.com), showcasing full-service software development, tech education programs, and commercial project delivery.",
     problem: "Potential commercial clients and tech students need a single trustworthy platform to explore digital engineering services, portfolio case studies, and training programs.",
     solution: "Architected a comprehensive agency portal communicating engineering capabilities, service offerings, client workflows, and educational academies.",
-    role: "Founder & Lead Architect — designed the complete brand identity, system architecture, deployment pipeline, and hosting on custom DNS.",
+    role: "Founder & Lead Architect: designed the complete brand identity, system architecture, deployment pipeline, and hosting on custom DNS.",
     tech: ["Full-Stack Architecture", "React.js", "Tailwind CSS", "Vercel", "Namecheap DNS & SSL"],
     features: [
       "Commercial software development services showcase",
@@ -287,7 +286,7 @@ export const projects = [
     summary: "Modern real estate discovery platform tailored for Rwandan property seekers and landlords, featuring multi-parameter property filtering and direct inquiry workflows.",
     problem: "Finding verified rental apartments, commercial spaces, and residential homes in Rwanda typically relies on fragmented informal agents with zero pricing transparency.",
     solution: "Designed and built a centralized discovery platform showcasing verified properties with granular specs, location filters, price comparisons, and direct landlord inquiry options.",
-    role: "Frontend Architect & Product Designer — structured the UI/UX design, filtering engine, component hierarchy, and responsive layout.",
+    role: "Frontend Architect & Product Designer: structured the UI/UX design, filtering engine, component hierarchy, and responsive layout.",
     tech: ["React.js", "Tailwind CSS", "Modern State Management", "Responsive UI/UX", "Component Architecture"],
     features: [
       "Dynamic property search filtered by location, price bracket, and property category",
@@ -300,8 +299,9 @@ export const projects = [
     outcome: "High-fidelity real estate platform prototype engineered for Rwanda's property market.",
     live: "https://github.com/mugishaisaie",
     github: "https://github.com/mugishaisaie",
-    image: TuraImg,
-    previewType: "screenshot",
+    /* ASSET NEEDED: Authentic Tura System interface screenshot. Placeholder slot. */
+    image: null,
+    previewType: "branded-mockup",
     brandColor: "#059669"
   },
   {
@@ -315,7 +315,7 @@ export const projects = [
     summary: "Real-time pizza ordering application built with React and Redux Toolkit, featuring dynamic cart management, order preview, and responsive checkout workflows.",
     problem: "Food delivery interfaces require robust, predictable state handling for complex multi-item orders, customized toppings, and real-time total updates.",
     solution: "Engineered an interactive ordering system using Redux Toolkit slices to manage global cart state, item customizations, and order previews.",
-    role: "Frontend Developer — built the state slices, UI interactions, and responsive cart interface.",
+    role: "Frontend Developer: built the state slices, UI interactions, and responsive cart interface.",
     tech: ["React.js", "Redux Toolkit", "React Router", "Tailwind CSS / CSS3", "State Management"],
     features: [
       "Dynamic pizza catalog with ingredient lists and price breakdowns",
@@ -343,7 +343,7 @@ export const projects = [
     summary: "Interactive global travel logging application integrating Leaflet maps, geolocation, and dynamic useReducer state management to record visited cities across the world.",
     problem: "Travel enthusiasts need an intuitive, map-centric interface to log their trips, record notes on visited locations, and visualize travel history geographically.",
     solution: "Developed an interactive single-page application with map markers, automatic location coordinate detection, and a fluid cities/countries tracking workflow.",
-    role: "Frontend Developer — implemented map integration, geolocation APIs, and state architecture.",
+    role: "Frontend Developer: implemented map integration, geolocation APIs, and state architecture.",
     tech: ["React.js", "Context API & useReducer", "Leaflet Maps", "React Router", "Geolocation API"],
     features: [
       "Interactive map navigation with custom coordinate-based pin placement",
@@ -449,7 +449,7 @@ export const experiences = [
     role: "Founder, Lead Full-Stack Developer & Systems Architect",
     company: "MITECH HUB",
     companyUrl: "https://mitechhubhq.com",
-    period: "May 2022 – Present",
+    period: "May 2022 - Present",
     location: "Kigali, Rwanda",
     type: "Founder & Lead Engineer",
     highlights: [
@@ -465,7 +465,7 @@ export const experiences = [
     role: "Full-Stack & Frontend Web Developer (Freelance Consultant)",
     company: "Upwork & Direct Commercial Clients",
     companyUrl: null,
-    period: "Feb 2025 – Present",
+    period: "Feb 2025 - Present",
     location: "Kigali, Rwanda (Remote)",
     type: "Freelance & Consulting",
     highlights: [
@@ -481,7 +481,7 @@ export const experiences = [
     role: "Web Developer Trainee & Lead Peer Mentor",
     company: "ESTG School Coding Club",
     companyUrl: null,
-    period: "Jul 2021 – Aug 2024",
+    period: "Jul 2021 - Aug 2024",
     location: "Gisenyi, Rwanda",
     type: "Leadership & Mentorship",
     highlights: [
@@ -495,11 +495,11 @@ export const experiences = [
     role: "Web Development & IT Intern",
     company: "N@TCOM Company",
     companyUrl: null,
-    period: "May 2022 – Apr 2023",
+    period: "May 2022 - Apr 2023",
     location: "Rwanda",
     type: "Internship",
     highlights: [
-      "Developed and maintained dynamic client websites utilizing JavaScript, PHP, CSS3, and MySQL database back-ends, increasing production website loading speed by 30%.",
+      "Developed and maintained dynamic client websites utilizing JavaScript, PHP, CSS3, and MySQL database back-ends, measurably improving production website asset caching and database query efficiency.",
       "Assisted in local network connectivity troubleshooting, client system configuration, agile UI/UX planning meetings, and collaborative code debugging."
     ],
     tech: ["JavaScript", "PHP", "MySQL", "CSS3", "IT & Network Troubleshooting"]
@@ -509,7 +509,7 @@ export const experiences = [
     role: "Data Entry & Digital Records Specialist",
     company: "BUSIGARI Health Center",
     companyUrl: null,
-    period: "Aug 2022 – Jan 2023",
+    period: "Aug 2022 - Jan 2023",
     location: "Rwanda",
     type: "Contract",
     highlights: [
@@ -522,14 +522,14 @@ export const experiences = [
 export const educationList = [
   {
     degree: "Advanced Diploma / BTech in Information Technology (IT)",
-    institution: "Rwanda Polytechnic — IPRC Tumba",
-    period: "2025 – Present (Expected 2028)",
+    institution: "Rwanda Polytechnic, IPRC Tumba",
+    period: "2025 - Present (Expected 2028)",
     location: "Rwanda",
     focus: "Core IT & Networking Coursework",
     details: "Computer Networking (LAN/WAN, Routing & Switching, TCP/IP, OSI Model), Software Engineering, Object-Oriented Programming (C/C++), Database Management Systems, Electronics, and Systems Analysis."
   },
   {
-    degree: "Advanced General Certificate of Education (A-Level) — Software Development",
+    degree: "Advanced General Certificate of Education (A-Level), Software Development",
     institution: "ESTG (Ecole des Sciences et Techniques Gisenyi)",
     period: "Graduated 2024",
     location: "Gisenyi, Rwanda",
@@ -560,7 +560,7 @@ export const certificationsList = [
   {
     title: "Huawei ICT Competition Participant",
     issuer: "Huawei ICT Academy",
-    date: "2026–2027 Track",
+    date: "2026-2027 Track",
     topics: "Networking & IT Infrastructure track (Routing, Switching, Network Security)."
   },
   {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { personalInfo, credibilityPoints } from '../data';
 import IsaiePhoto from '../assets/images/isaie.jpg';
 import Projects from './Projects';
@@ -14,11 +14,12 @@ import {
   FaWhatsapp, 
   FaDownload, 
   FaArrowRight, 
-  FaArrowDown,
   FaLocationDot
 } from 'react-icons/fa6';
 
 export default function HomePage() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <div className="flex flex-col w-full">
       
@@ -38,23 +39,20 @@ export default function HomePage() {
               
               {/* Availability Indicator */}
               <motion.div
-                initial={{ opacity: 0, y: -10 }}
+                initial={shouldReduceMotion ? false : { opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 shadow-sm"
+                transition={{ duration: shouldReduceMotion ? 0 : 0.4 }}
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 shadow-sm"
               >
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-                </span>
+                <span className="w-2 h-2 rounded-full bg-emerald-500" />
                 <span>Available for Engineering Roles & Digital Solutions</span>
               </motion.div>
 
               {/* Main Headline */}
               <motion.div
-                initial={{ opacity: 0, y: 15 }}
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                transition={{ duration: shouldReduceMotion ? 0 : 0.5, delay: shouldReduceMotion ? 0 : 0.1 }}
                 className="space-y-3"
               >
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] text-stone-900 dark:text-white">
@@ -67,34 +65,34 @@ export default function HomePage() {
 
               {/* Supporting Bio */}
               <motion.p
-                initial={{ opacity: 0 }}
+                initial={shouldReduceMotion ? false : { opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: shouldReduceMotion ? 0 : 0.5, delay: shouldReduceMotion ? 0 : 0.2 }}
                 className="text-base sm:text-lg text-stone-600 dark:text-stone-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
               >
-                I am <strong>Mugisha Isaie</strong>, based in Kigali, Rwanda. I engineer high-performance Single Page Applications, commercial SaaS platforms, and frictionless e-commerce systems — combining modern React architectures with robust Supabase and Node.js backends and enterprise networking fundamentals.
+                I am <strong>Mugisha Isaie</strong>, based in Kigali, Rwanda. I engineer high-performance web applications, commercial SaaS platforms, and e-commerce systems with modern React and reliable backends.
               </motion.p>
 
               {/* Dual Calls to Action (Hire Me & Work With Me) */}
               <motion.div
-                initial={{ opacity: 0, y: 15 }}
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                transition={{ duration: shouldReduceMotion ? 0 : 0.5, delay: shouldReduceMotion ? 0 : 0.3 }}
                 className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2"
               >
                 {/* Primary: View Projects */}
                 <a
                   href="#projects"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/25 transition-all hover:scale-[1.02]"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/25 transition-colors"
                 >
                   <span>Explore Case Studies</span>
-                  <FaArrowDown className="w-3.5 h-3.5" />
+                  <FaArrowRight className="w-3.5 h-3.5" />
                 </a>
 
                 {/* Secondary: Contact / Hire */}
                 <a
                   href="#contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold bg-stone-900 hover:bg-stone-800 text-white dark:bg-stone-800 dark:hover:bg-stone-700 dark:text-white border border-stone-800 dark:border-stone-700 transition-all hover:scale-[1.02]"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold bg-stone-900 hover:bg-stone-800 text-white dark:bg-stone-800 dark:hover:bg-stone-700 dark:text-white border border-stone-800 dark:border-stone-700 transition-colors"
                 >
                   <span>Hire / Work With Me</span>
                   <FaArrowRight className="w-3.5 h-3.5 text-blue-400" />
@@ -113,9 +111,9 @@ export default function HomePage() {
 
               {/* Verified Quick Links */}
               <motion.div
-                initial={{ opacity: 0 }}
+                initial={shouldReduceMotion ? false : { opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                transition={{ duration: shouldReduceMotion ? 0 : 0.5, delay: shouldReduceMotion ? 0 : 0.4 }}
                 className="flex flex-wrap items-center justify-center lg:justify-start gap-5 pt-4 text-xs font-semibold text-stone-500 dark:text-stone-400"
               >
                 <div className="flex items-center gap-1.5 text-stone-700 dark:text-stone-300">
@@ -159,9 +157,9 @@ export default function HomePage() {
             {/* Right Column: Visual Portrait Treatment (Col 5) */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
+                initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: shouldReduceMotion ? 0 : 0.6, delay: shouldReduceMotion ? 0 : 0.2 }}
                 className="relative w-72 sm:w-80 md:w-96"
               >
                 {/* Subtle back decorative frame */}
@@ -189,19 +187,6 @@ export default function HomePage() {
                     </p>
                   </div>
                 </div>
-
-                {/* Floating Tech Pill 1 */}
-                <div className="absolute -top-3 -left-4 px-3.5 py-1.5 rounded-xl bg-white/95 dark:bg-stone-800/95 backdrop-blur shadow-lg border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-800 dark:text-stone-200 hidden sm:flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-blue-500" />
-                  <span>React.js & Supabase</span>
-                </div>
-
-                {/* Floating Tech Pill 2 */}
-                <div className="absolute -bottom-3 -right-4 px-3.5 py-1.5 rounded-xl bg-white/95 dark:bg-stone-800/95 backdrop-blur shadow-lg border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-800 dark:text-stone-200 hidden sm:flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span>Networking & TCP/IP</span>
-                </div>
-
               </motion.div>
             </div>
 

@@ -1,8 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { skillCategories } from '../data';
 import { 
-  FaCode, 
   FaBolt, 
   FaMobileScreen, 
   FaLock, 
@@ -10,6 +9,8 @@ import {
 } from 'react-icons/fa6';
 
 export default function Skills({ isStandalone = false }) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section 
       id="skills" 
@@ -19,10 +20,6 @@ export default function Skills({ isStandalone = false }) {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 mb-4">
-            <FaCode className="w-3.5 h-3.5" />
-            <span>Technical Capabilities</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-stone-900 dark:text-white">
             Core Technical Competencies
           </h2>
@@ -36,10 +33,10 @@ export default function Skills({ isStandalone = false }) {
           {skillCategories.map((cat, idx) => (
             <motion.div
               key={cat.name}
-              initial={{ opacity: 0, y: 20 }}
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.08 }}
+              transition={{ duration: shouldReduceMotion ? 0 : 0.4, delay: shouldReduceMotion ? 0 : idx * 0.08 }}
               className="flex flex-col bg-stone-50 dark:bg-stone-800/60 rounded-2xl p-6 sm:p-7 border border-stone-200/90 dark:border-stone-700/80 shadow-sm hover:shadow-md transition-shadow"
             >
               {/* Category Header */}
@@ -47,7 +44,7 @@ export default function Skills({ isStandalone = false }) {
                 <h3 className="text-xl font-bold text-stone-900 dark:text-white tracking-tight">
                   {cat.name}
                 </h3>
-                <p className="text-xs sm:text-sm text-stone-500 dark:text-stone-400 mt-1">
+                <p className="text-xs sm:text-sm text-stone-600 dark:text-stone-400 mt-1">
                   {cat.description}
                 </p>
               </div>

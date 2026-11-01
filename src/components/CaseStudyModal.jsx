@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { 
   FaXmark, 
   FaArrowUpRightFromSquare, 
@@ -12,6 +12,8 @@ import {
 } from 'react-icons/fa6';
 
 export default function CaseStudyModal({ project, isOpen, onClose }) {
+  const shouldReduceMotion = useReducedMotion();
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
@@ -40,10 +42,10 @@ export default function CaseStudyModal({ project, isOpen, onClose }) {
         aria-labelledby="case-study-title"
       >
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          transition={{ duration: 0.25, ease: 'easeOut' }}
+          exit={shouldReduceMotion ? false : { opacity: 0, scale: 0.95, y: 20 }}
+          transition={{ duration: shouldReduceMotion ? 0 : 0.25, ease: 'easeOut' }}
           onClick={(e) => e.stopPropagation()}
           className="relative w-full max-w-4xl max-h-[90vh] flex flex-col bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl shadow-2xl overflow-hidden my-auto"
         >
@@ -56,10 +58,10 @@ export default function CaseStudyModal({ project, isOpen, onClose }) {
                 </span>
                 <span className={`text-xs font-semibold px-2.5 py-1 rounded-md ${
                   project.badgeType === 'live' 
-                    ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20' 
+                    ? 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20' 
                     : project.badgeType === 'prototype'
-                    ? 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20'
-                    : 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20'
+                    ? 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20'
+                    : 'bg-blue-500/10 text-blue-700 dark:text-blue-400 border border-blue-500/20'
                 }`}>
                   {project.badge}
                 </span>
@@ -74,7 +76,7 @@ export default function CaseStudyModal({ project, isOpen, onClose }) {
 
             <button
               onClick={onClose}
-              className="p-2 rounded-xl text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors"
+              className="min-h-[44px] min-w-[44px] p-2 flex items-center justify-center rounded-xl text-stone-600 hover:text-stone-900 dark:text-stone-300 dark:hover:text-stone-100 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors"
               aria-label="Close modal"
             >
               <FaXmark className="w-5 h-5" />
@@ -88,7 +90,7 @@ export default function CaseStudyModal({ project, isOpen, onClose }) {
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors shadow-sm"
+                className="min-h-[40px] inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors shadow-sm"
               >
                 <span>Visit Live Application</span>
                 <FaArrowUpRightFromSquare className="w-3.5 h-3.5" />
@@ -99,7 +101,7 @@ export default function CaseStudyModal({ project, isOpen, onClose }) {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-stone-200 dark:bg-stone-800 hover:bg-stone-300 dark:hover:bg-stone-700 text-stone-800 dark:text-stone-200 transition-colors"
+                className="min-h-[40px] inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-stone-200 dark:bg-stone-800 hover:bg-stone-300 dark:hover:bg-stone-700 text-stone-800 dark:text-stone-200 transition-colors"
               >
                 <FaGithub className="w-4 h-4" />
                 <span>View Source Code</span>
@@ -123,7 +125,7 @@ export default function CaseStudyModal({ project, isOpen, onClose }) {
 
             {/* The Problem & Need */}
             <div className="bg-stone-50 dark:bg-stone-800/40 p-5 rounded-xl border border-stone-200/80 dark:border-stone-800">
-              <h3 className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-2">
+              <h3 className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 mb-2">
                 <FaBullseye className="text-rose-500" />
                 <span>The Challenge / Business Need</span>
               </h3>
@@ -206,7 +208,7 @@ export default function CaseStudyModal({ project, isOpen, onClose }) {
 
             {/* Tech Stack Pills */}
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-2">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 mb-2">
                 Technologies & Tools Used
               </h4>
               <div className="flex flex-wrap gap-2">
@@ -227,7 +229,7 @@ export default function CaseStudyModal({ project, isOpen, onClose }) {
           <div className="p-4 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900/50 flex justify-end">
             <button
               onClick={onClose}
-              className="px-5 py-2 text-sm font-semibold rounded-lg bg-stone-200 dark:bg-stone-800 hover:bg-stone-300 dark:hover:bg-stone-700 text-stone-800 dark:text-stone-200 transition-colors"
+              className="min-h-[44px] px-5 py-2 text-sm font-semibold rounded-lg bg-stone-200 dark:bg-stone-800 hover:bg-stone-300 dark:hover:bg-stone-700 text-stone-800 dark:text-stone-200 transition-colors"
             >
               Close Case Study
             </button>

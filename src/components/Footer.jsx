@@ -83,9 +83,9 @@ export default function Footer() {
 
           {/* Col 2: Navigation Links (Col 3) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-stone-900 dark:text-white">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-stone-900 dark:text-white">
               Navigation
-            </h4>
+            </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#hero" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
@@ -127,9 +127,9 @@ export default function Footer() {
 
           {/* Col 3: Direct Contact & Resources (Col 4) */}
           <div className="lg:col-span-4 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-stone-900 dark:text-white">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-stone-900 dark:text-white">
               Direct Contact & Documents
-            </h4>
+            </h3>
             <div className="space-y-2 text-sm">
               <p>
                 Email:{' '}
@@ -166,7 +166,7 @@ export default function Footer() {
               <a
                 href={personalInfo.resumeUrl}
                 download="Mugisha_Isaie_Web_Developer_Resume.pdf"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-colors"
               >
                 <FaDownload className="w-3.5 h-3.5" />
                 <span>Download Developer Resume</span>

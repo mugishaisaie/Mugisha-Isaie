@@ -8,12 +8,13 @@ import {
   FaDownload, 
   FaWhatsapp
 } from 'react-icons/fa6';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const shouldReduceMotion = useReducedMotion();
 
   const handleNavClick = (e, targetId, routePath) => {
     setIsOpen(false);
@@ -90,7 +91,7 @@ export default function Navbar() {
             <a
               href={personalInfo.resumeUrl}
               download="Mugisha_Isaie_Web_Developer_Resume.pdf"
-              className="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold bg-stone-900 hover:bg-stone-800 text-white dark:bg-white dark:text-stone-900 dark:hover:bg-stone-100 shadow-sm transition-all hover:scale-[1.02]"
+              className="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold bg-stone-900 hover:bg-stone-800 text-white dark:bg-white dark:text-stone-900 dark:hover:bg-stone-100 shadow-sm transition-colors"
               title="Download Mugisha Isaie Resume (PDF)"
             >
               <FaDownload className="w-3.5 h-3.5 text-blue-400 dark:text-blue-600" />
@@ -104,7 +105,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen((prev) => !prev)}
               type="button"
-              className="lg:hidden p-2.5 rounded-xl border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="lg:hidden min-h-[44px] min-w-[44px] p-2.5 flex items-center justify-center rounded-xl border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
               aria-label={isOpen ? "Close main menu" : "Open main menu"}
               aria-expanded={isOpen}
             >
@@ -120,10 +121,10 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25, ease: 'easeInOut' }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={shouldReduceMotion ? false : { opacity: 0, y: -10 }}
+            transition={{ duration: shouldReduceMotion ? 0 : 0.2 }}
             className="lg:hidden bg-white/95 dark:bg-stone-900/95 backdrop-blur-xl border-b border-stone-200 dark:border-stone-800 overflow-hidden"
           >
             <div className="px-4 py-6 space-y-2">
@@ -132,7 +133,7 @@ export default function Navbar() {
                   key={item.label}
                   href={item.route}
                   onClick={(e) => handleNavClick(e, item.targetId, item.route)}
-                  className="block px-4 py-2.5 rounded-xl text-sm font-semibold text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
+                  className="min-h-[44px] flex items-center px-4 py-2.5 rounded-xl text-sm font-semibold text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
                 >
                   {item.label}
                 </a>
@@ -142,7 +143,7 @@ export default function Navbar() {
                 <a
                   href={personalInfo.resumeUrl}
                   download="Mugisha_Isaie_Web_Developer_Resume.pdf"
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-xs font-bold bg-blue-600 text-white shadow-sm"
+                  className="w-full min-h-[44px] flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-xs font-bold bg-blue-600 text-white shadow-sm transition-colors hover:bg-blue-700"
                 >
                   <FaDownload className="w-3.5 h-3.5" />
                   <span>Download Resume (PDF)</span>
@@ -152,7 +153,7 @@ export default function Navbar() {
                   href={personalInfo.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-sm"
+                  className="w-full min-h-[44px] flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-sm transition-colors hover:bg-emerald-700"
                 >
                   <FaWhatsapp className="w-4 h-4" />
                   <span>Chat on WhatsApp</span>

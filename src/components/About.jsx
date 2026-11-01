@@ -5,7 +5,6 @@ import {
 } from '../data';
 import IsaiePhoto from '../assets/images/isaie.jpg';
 import { 
-  FaUser, 
   FaDownload, 
   FaLanguage, 
   FaHeart, 
@@ -22,10 +21,6 @@ export default function About({ isStandalone = false }) {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 mb-4">
-            <FaUser className="w-3.5 h-3.5" />
-            <span>Engineering Profile & Story</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-stone-900 dark:text-white">
             About Mugisha Isaie
           </h2>
@@ -61,14 +56,14 @@ export default function About({ isStandalone = false }) {
               <a
                 href={personalInfo.resumeUrl}
                 download="Mugisha_Isaie_Web_Developer_Resume.pdf"
-                className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/20 transition-all"
+                className="min-h-[44px] flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/20 transition-colors"
               >
                 <FaDownload className="w-4 h-4" />
                 <span>Download Resume (PDF)</span>
               </a>
               <a
                 href="#contact"
-                className="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-white dark:bg-stone-800 hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-900 dark:text-white border border-stone-200 dark:border-stone-700 transition-colors"
+                className="min-h-[44px] inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-white dark:bg-stone-800 hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-900 dark:text-white border border-stone-200 dark:border-stone-700 transition-colors"
               >
                 Get in Touch
               </a>
@@ -108,7 +103,7 @@ export default function About({ isStandalone = false }) {
               </p>
 
               <p>
-                When the time came to specialize in secondary school at <strong>ESTG (Ecole des Sciences et Techniques Gisenyi)</strong>, I enrolled in the Software Development (SOD) stream. What began as academic study quickly became my true passion. I realized that web engineering was not just syntax — it was the most immediate, accessible way to create software that solves tangible problems for businesses and people across borders.
+                When the time came to specialize in secondary school at <strong>ESTG (Ecole des Sciences et Techniques Gisenyi)</strong>, I enrolled in the Software Development (SOD) stream. What began as academic study quickly became my true passion. I realized that web engineering was not just syntax; it was the most immediate, accessible way to create software that solves tangible problems for businesses and people across borders.
               </p>
 
               <p>

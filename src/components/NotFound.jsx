@@ -14,7 +14,7 @@ export default function NotFound() {
         <div className="pt-2">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/20 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/20 transition-colors min-h-[44px]"
           >
             <FaArrowLeft className="w-3.5 h-3.5" />
             <span>Return to Portfolio Home</span>

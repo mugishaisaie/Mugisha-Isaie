@@ -1,12 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { 
   experiences, 
   educationList, 
   certificationsList 
 } from '../data';
 import { 
-  FaBriefcase, 
   FaGraduationCap, 
   FaAward, 
   FaLocationDot, 
@@ -15,6 +14,8 @@ import {
 } from 'react-icons/fa6';
 
 export default function Experience({ isStandalone = false }) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section 
       id="experience" 
@@ -24,10 +25,6 @@ export default function Experience({ isStandalone = false }) {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 mb-4">
-            <FaBriefcase className="w-3.5 h-3.5" />
-            <span>Career & Engineering Timeline</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-stone-900 dark:text-white">
             Professional Experience & Education
           </h2>
@@ -41,10 +38,10 @@ export default function Experience({ isStandalone = false }) {
           {experiences.map((exp, idx) => (
             <motion.div
               key={exp.id}
-              initial={{ opacity: 0, x: -20 }}
+              initial={shouldReduceMotion ? false : { opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.05 }}
+              transition={{ duration: shouldReduceMotion ? 0 : 0.4, delay: shouldReduceMotion ? 0 : idx * 0.05 }}
               className="relative group"
             >
               {/* Timeline Dot Indicator */}
@@ -81,13 +78,13 @@ export default function Experience({ isStandalone = false }) {
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm font-medium text-stone-500 dark:text-stone-400">
+                  <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm font-medium text-stone-600 dark:text-stone-400">
                     <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-stone-100 dark:bg-stone-700/60 text-stone-700 dark:text-stone-300">
                       <FaCalendarDays className="w-3 h-3 text-blue-500" />
                       {exp.period}
                     </span>
                     <span className="inline-flex items-center gap-1">
-                      <FaLocationDot className="w-3 h-3 text-stone-400" />
+                      <FaLocationDot className="w-3 h-3 text-stone-500 dark:text-stone-400" />
                       {exp.location}
                     </span>
                   </div>
