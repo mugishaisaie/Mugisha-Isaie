@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaAward, FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 // --- TEMPLATE DATA ---
 const certifications = [

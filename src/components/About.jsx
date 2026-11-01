@@ -1,223 +1,163 @@
-import React from "react";
-import { motion } from "framer-motion";
-import AboutImg from '../assets/images/Isaie_blessing.jpg'
+import React from 'react';
 import { 
-  FaGraduationCap, 
+  personalInfo, 
+  languagesList 
+} from '../data';
+import IsaiePhoto from '../assets/images/isaie.jpg';
+import { 
+  FaUser, 
   FaDownload, 
-  FaRocket, 
-  FaCode, 
-  FaLaptopCode 
-} from "react-icons/fa6";
-import { 
-  SiMongodb, 
-  SiExpress, 
-  SiReact, 
-  SiNodedotjs, 
-  SiTailwindcss, 
-  SiTypescript,
-  SiPhp,
-  SiMysql
-} from "react-icons/si";
+  FaLanguage, 
+  FaHeart, 
+  FaCompass
+} from 'react-icons/fa6';
 
-// --- STRATEGIC DATA ---
-const aboutData = {
-  image: AboutImg,
-  headline: "Turning Complex Problems into Simple Digital Solutions.",
-  subHeadline: "Full-Stack Developer | Instructor | Tech Mentor",
-  bio: [
-    "I am Mugisha Isaie, a developer who bridges the gap between 'learning code' and 'building products'. Based in Rwanda, I specialize in the MERN stack and modern web technologies.",
-    "My philosophy is simple: Technology is a tool to solve human problems. Whether I'm teaching a student how to center a div or building a scalable backend for a client, I focus on clarity, performance, and impact.",
-    "Currently finishing my degree at IPRC Tumba, I combine academic rigor with real-world agility. I don't just write code; I engineer solutions."
-  ],
-  stats: [
-    { label: "Students Taught", value: "1000+", icon: <FaLaptopCode /> },
-    { label: "Projects Shipped", value: "100+", icon: <FaCode /> },
-    { label: "Years Coding", value: "4+", icon: <FaRocket /> },
-  ],
-  techStack: [
-    { icon: <SiMongodb size={24} />, name: "MongoDB", color: "text-green-500" },
-    { icon: <SiExpress size={24} />, name: "Express", color: "text-gray-500" },
-    { icon: <SiReact size={24} />, name: "React", color: "text-blue-400" },
-    { icon: <SiNodedotjs size={24} />, name: "Node.js", color: "text-green-600" },
-    { icon: <SiTailwindcss size={24} />, name: "Tailwind", color: "text-teal-400" },
-    { icon: <SiTypescript size={24} />, name: "TypeScript", color: "text-blue-600" },
-  ],
-  education: [
-    {
-      year: "20204 - Present",
-      role: "Bachelor's in IT",
-      institution: "IPRC Tumba",
-      description: "specializing in Software Engineering, DevOps, Machine Learning & System Analysis."
-    },
-    {
-      year: "2021 - 2024",
-      role: "Diploma in Software Development",
-      institution: "Ecole Secondaire Technique Gisenyi (ESTG)",
-      description: "Focused on Programming, Web Development, Databases, and Computer Systems, Built multiple school-based projects and participated in coding club activities"
-    },
-    {
-      year: "2022 - Present",
-      role: "Certified Full Stack Web Developer",
-      institution: "Online Certification / Self-Taught",
-      description: "Intensive training in Javascript, Tailwind CSS, React, Node.js, and Modern UI/UX principles."
-    },
-    {
-      year: "2023",
-      role: "Full-Stack Web Development",
-      institution: "N@TCOM Company, Rwanda /Internship",
-      description: "Learned HTML, CSS, JavaScript, Bootstrap, PHP, and MySQL Built foundational web projects in a collaborative learning environment"
-    }
-  ]
-};
-
-// --- ANIMATION VARIANTS ---
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: { 
-    opacity: 1,
-    transition: { staggerChildren: 0.15 }
-  }
-};
-
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.6 } }
-};
-
-const About = () => {
+export default function About({ isStandalone = false }) {
   return (
-    <section className="py-24 bg-stone-50 dark:bg-stone-950 text-stone-800 dark:text-stone-200 overflow-hidden relative">
-      
-      {/* Background Decorative Blob for depth */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/50 dark:bg-blue-900/20 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2"></div>
-
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+    <section 
+      id="about" 
+      className={`py-20 md:py-28 ${isStandalone ? 'pt-28' : ''} bg-stone-50 dark:bg-stone-900/60 text-stone-900 dark:text-stone-100 transition-colors border-t border-stone-200/80 dark:border-stone-800`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* LEFT COLUMN: Visual Authority (Image + Stack) (Span 5) */}
-        <motion.div 
-          className="lg:col-span-5 relative"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Main Image Container */}
-          <div className="relative rounded-3xl overflow-hidden border-[6px] border-white dark:border-stone-800 shadow-2xl z-10">
-            <img 
-              src={aboutData.image} 
-              alt="Mugisha Isaie" 
-              className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700 ease-out" 
-            />
-            
-            {/* Overlay Gradient for Text readability if needed */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
-            
-            {/* Floating Badge (Glassmorphism) */}
-            <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white">
-              <p className="text-xs font-semibold uppercase tracking-wider text-blue-200">Current Focus</p>
-              <p className="font-bold text-lg">Building Problem SOlving  Digital Products </p>
-            </div>
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 mb-4">
+            <FaUser className="w-3.5 h-3.5" />
+            <span>Engineering Profile & Story</span>
           </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-stone-900 dark:text-white">
+            About Mugisha Isaie
+          </h2>
+          <p className="mt-4 text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
+            Full-Stack Developer, Systems Architect, and IT student committed to engineering practical digital solutions for real-world problems.
+          </p>
+        </div>
 
-          {/* Decorative Back Drop (Offset Box) */}
-          <div className="absolute top-4 -left-4 w-full h-full border-2 border-stone-200 dark:border-stone-800 rounded-3xl -z-10"></div>
-
-          {/* Tech Stack Grid - MOVED here for visual proximity to the developer */}
-          <div className="mt-8">
-            <h4 className="text-sm font-bold text-stone-400 uppercase tracking-widest mb-4 text-center lg:text-left">Tech Stack</h4>
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-              {aboutData.techStack.map((tech, idx) => (
-                <div key={idx} className="flex items-center gap-2 px-3 py-2 bg-white dark:bg-stone-900 rounded-lg shadow-sm border border-stone-100 dark:border-stone-800 text-sm font-medium hover:border-blue-500 transition-colors cursor-default">
-                  <span className={tech.color}>{tech.icon}</span>
-                  <span>{tech.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
-
-        {/* RIGHT COLUMN: The Pitch (Span 7) */}
-        <motion.div 
-          className="lg:col-span-7"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {/* Header */}
-          <motion.div variants={itemVariants} className="mb-8">
-            <h2 className="flex items-center gap-2 text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-3">
-              <span className="w-8 h-[2px] bg-blue-600 dark:bg-blue-400"></span>
-              About Me
-            </h2>
-            <h3 className="text-4xl md:text-5xl font-bold mb-4 leading-tight text-stone-900 dark:text-white">
-              {aboutData.headline}
-            </h3>
-            <p className="text-xl text-stone-500 dark:text-stone-400 font-medium">
-              {aboutData.subHeadline}
-            </p>
-          </motion.div>
-
-          {/* Bio Text */}
-          <motion.div variants={itemVariants} className="space-y-4 text-stone-600 dark:text-stone-300 leading-relaxed text-lg mb-10">
-            {aboutData.bio.map((text, idx) => (
-              <p key={idx}>{text}</p>
-            ))}
-          </motion.div>
-
-          {/* Interactive Stats Row */}
-          <motion.div variants={itemVariants} className="grid grid-cols-3 gap-4 mb-10">
-            {aboutData.stats.map((stat, idx) => (
-              <div key={idx} className="p-4 bg-white dark:bg-stone-900 rounded-2xl shadow-sm border border-stone-100 dark:border-stone-800 text-center hover:-translate-y-1 transition-transform duration-300">
-                <div className="flex justify-center text-blue-600 dark:text-blue-400 mb-2 text-2xl">
-                  {stat.icon}
-                </div>
-                <div className="text-3xl font-bold text-stone-900 dark:text-white">{stat.value}</div>
-                <div className="text-xs text-stone-500 uppercase tracking-wider font-semibold">{stat.label}</div>
+        {/* Main Profile Grid: Photo + Narrative */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
+          
+          {/* Photo & Quick Details (Col 5) */}
+          <div className="lg:col-span-5 flex flex-col items-center lg:items-start space-y-6">
+            <div className="relative w-full max-w-md aspect-square rounded-3xl overflow-hidden border-4 border-white dark:border-stone-800 shadow-xl bg-stone-200 dark:bg-stone-800">
+              <img
+                src={IsaiePhoto}
+                alt="Mugisha Isaie - Full-Stack Developer"
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex flex-col justify-end p-6 text-white">
+                <span className="text-xs font-semibold uppercase tracking-wider text-blue-300">
+                  Based in Kigali, Rwanda
+                </span>
+                <h3 className="text-2xl font-bold">Mugisha Isaie</h3>
+                <p className="text-xs text-stone-200 mt-0.5">
+                  Full-Stack Developer & Founder @ MITECH HUB
+                </p>
               </div>
-            ))}
-          </motion.div>
+            </div>
 
-          {/* Education & Action Area */}
-          <motion.div variants={itemVariants} className="flex flex-col md:flex-row gap-8 md:items-start border-t border-stone-200 dark:border-stone-800 pt-8">
-            
-            {/* Timeline */}
-            <div className="flex-1">
-               <h4 className="flex items-center gap-2 text-lg font-bold mb-6 text-stone-900 dark:text-white">
-                <FaGraduationCap className="text-blue-500" /> Education
-              </h4>
-              <div className="space-y-6">
-                {aboutData.education.map((edu, idx) => (
-                  <div key={idx} className="pl-4 border-l-2 border-stone-200 dark:border-stone-700 relative">
-                    <span className="absolute -left-[5px] top-2 w-2 h-2 rounded-full bg-blue-500"></span>
-                    <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase">{edu.year}</span>
-                    <h5 className="font-bold text-stone-900 dark:text-stone-100">{edu.role}</h5>
-                    <p className="text-sm text-stone-500">{edu.institution}</p>
+            {/* Quick Actions */}
+            <div className="w-full max-w-md flex flex-wrap gap-3">
+              <a
+                href={personalInfo.resumeUrl}
+                download="Mugisha_Isaie_Web_Developer_Resume.pdf"
+                className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/20 transition-all"
+              >
+                <FaDownload className="w-4 h-4" />
+                <span>Download Resume (PDF)</span>
+              </a>
+              <a
+                href="#contact"
+                className="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-white dark:bg-stone-800 hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-900 dark:text-white border border-stone-200 dark:border-stone-700 transition-colors"
+              >
+                Get in Touch
+              </a>
+            </div>
+
+            {/* Spoken Languages Card */}
+            <div className="w-full max-w-md bg-white dark:bg-stone-800/80 rounded-2xl p-6 border border-stone-200 dark:border-stone-700 shadow-sm">
+              <div className="flex items-center gap-2 mb-4 text-stone-900 dark:text-white font-bold text-sm">
+                <FaLanguage className="w-4 h-4 text-blue-500" />
+                <span>Spoken Languages</span>
+              </div>
+              <div className="space-y-3">
+                {languagesList.map((lang, idx) => (
+                  <div key={idx} className="flex items-center justify-between text-xs sm:text-sm">
+                    <span className="font-semibold text-stone-800 dark:text-stone-200">
+                      {lang.language}
+                    </span>
+                    <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-stone-100 dark:bg-stone-700 text-stone-600 dark:text-stone-300">
+                      {lang.level}
+                    </span>
                   </div>
                 ))}
               </div>
             </div>
+          </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col gap-4 min-w-[200px]">
-              <a 
-                href="/resume.pdf"
-                className="group flex items-center justify-center gap-3 bg-stone-900 dark:bg-white text-white dark:text-stone-900 px-6 py-4 rounded-xl font-bold hover:bg-stone-800 dark:hover:bg-stone-200 transition-all shadow-lg hover:shadow-xl"
-              >
-                <FaDownload className="group-hover:translate-y-1 transition-transform" /> 
-                Download CV
-              </a>
-              <button className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-bold border-2 border-stone-200 dark:border-stone-800 hover:border-blue-500 text-stone-600 dark:text-stone-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                View My Work!
-              </button>
+          {/* Narrative / Biography (Col 7) */}
+          <div className="lg:col-span-7 space-y-6 text-stone-700 dark:text-stone-300 leading-relaxed text-sm sm:text-base">
+            
+            <div className="p-6 bg-white dark:bg-stone-800/80 rounded-2xl border border-stone-200 dark:border-stone-700 shadow-sm space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-stone-900 dark:text-white">
+                How I Found My Calling in Web Engineering
+              </h3>
+              
+              <p>
+                Growing up in Rwanda, I have always possessed a deep desire to help others and solve human problems. My father consistently encouraged me to explore and understand technology, recognizing that the future would be written in software.
+              </p>
+
+              <p>
+                When the time came to specialize in secondary school at <strong>ESTG (Ecole des Sciences et Techniques Gisenyi)</strong>, I enrolled in the Software Development (SOD) stream. What began as academic study quickly became my true passion. I realized that web engineering was not just syntax — it was the most immediate, accessible way to create software that solves tangible problems for businesses and people across borders.
+              </p>
+
+              <p>
+                During my time at ESTG, I served as <strong>Lead Peer Mentor in the ESTG Coding Club</strong>, mentoring over 50 junior students in HTML, CSS, JavaScript, and responsive design. Witnessing beginners build their first functioning websites confirmed my belief in developer community, structured mentorship, and pragmatic learning.
+              </p>
             </div>
-          </motion.div>
 
-        </motion.div>
+            <div className="p-6 bg-white dark:bg-stone-800/80 rounded-2xl border border-stone-200 dark:border-stone-700 shadow-sm space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-stone-900 dark:text-white">
+                Founding MITECH HUB & Ongoing Technical Education
+              </h3>
+
+              <p>
+                In May 2022, I founded <strong>MITECH HUB (mitechhubhq.com)</strong> to bridge the gap between technical code and commercial business value. Through MITECH HUB, I have architected and deployed production systems including <strong>InjizaSMM</strong> (a social media marketing automation platform) and <strong>Inkweto Footwear Store</strong> (a high-converting retail platform with WhatsApp-integrated checkouts tailored for East African shoppers).
+              </p>
+
+              <p>
+                To fortify my software development practice with deep infrastructure and systems knowledge, I am currently pursuing an <strong>Advanced Diploma / BTech in Information Technology</strong> at <strong>Rwanda Polytechnic (IPRC Tumba)</strong>. My curriculum covers enterprise computer networking (LAN/WAN, routing and switching, TCP/IP, OSI model), database management systems, and systems analysis.
+              </p>
+            </div>
+
+            {/* Core Values */}
+            <div className="grid sm:grid-cols-2 gap-4 pt-2">
+              <div className="p-4 rounded-xl bg-blue-50/70 dark:bg-blue-950/20 border border-blue-200/60 dark:border-blue-900/40">
+                <div className="flex items-center gap-2 font-bold text-blue-900 dark:text-blue-300 text-sm mb-1">
+                  <FaCompass className="w-4 h-4 text-blue-600" />
+                  <span>Evidence Before Claims</span>
+                </div>
+                <p className="text-xs text-stone-600 dark:text-stone-400">
+                  I demonstrate capabilities through functioning code, live platforms, and documented architecture rather than subjective percentages.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/20 border border-emerald-200/60 dark:border-emerald-900/40">
+                <div className="flex items-center gap-2 font-bold text-emerald-900 dark:text-emerald-300 text-sm mb-1">
+                  <FaHeart className="w-4 h-4 text-emerald-600" />
+                  <span>Business-Driven UX</span>
+                </div>
+                <p className="text-xs text-stone-600 dark:text-stone-400">
+                  Every button, layout choice, and database query must serve the end user experience and solve real commercial bottlenecks.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
   );
-};
-
-export default About;
+}

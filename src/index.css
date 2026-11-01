@@ -1,29 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-  .bg-light{
-   @apply  bg-stone-200 py-2 px-4 rounded-full
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
-  .bg-dark{
-   @apply  bg-stone-800 py-2 px-4 rounded-full
+
+  body {
+    @apply bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-100 transition-colors duration-200;
   }
- 
+
+  /* Accessibility: Visible Focus Indicators */
+  *:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+  }
 }
 
-
-
-
-
-
-
-body{
-    font-family: 'Inter','Poppins', sans-serif;
-    background-color: #f3f4f6;
-    color: #111827;
+/* Reduced Motion Support for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
-html {
-  transition: background-color 0.3s ease, color 0.3s ease;
+
+/* Subtle Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(82, 82, 91, 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(82, 82, 91, 0.8);
 }
