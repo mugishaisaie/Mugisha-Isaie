@@ -1,6 +1,12 @@
 import IsaieHotelImg from './assets/project-images/isaie_Hotel.png';
 import MyPizzasShopImg from './assets/project-images/pizza-app-img.png';
 import WorldWiseImg from './assets/project-images/world-wise-app.png';
+import InkwetoImg from './assets/project-images/Inkweto.png';
+import AmbaraImg from './assets/project-images/Ambara.png';
+import ElectroHubImg from './assets/project-images/electrohub.png';
+import MitechHubImg from './assets/project-images/mitechhub.png';
+import InjizaSmmImg from './assets/project-images/injizasmm.png';
+import TuraImg from './assets/project-images/tura-system.jpg';
 
 // Tech Icons from react-icons/fa6 and react-icons/si
 import { 
@@ -124,8 +130,8 @@ export const projects = [
     outcome: "Live in active commercial production at injizasmm.com, serving businesses and digital creators.",
     live: "https://injizasmm.com/",
     github: null,
-    image: null,
-    previewType: "branded-mockup",
+    image: InjizaSmmImg,
+    previewType: "screenshot",
     brandColor: "#0284c7"
   },
   {
@@ -153,8 +159,8 @@ export const projects = [
     outcome: "Successfully deployed and operational at inkweto.vercel.app with high customer completion rates.",
     live: "https://inkweto.vercel.app/",
     github: "https://github.com/mugishaisaie",
-    image: null,
-    previewType: "branded-mockup",
+    image: InkwetoImg,
+    previewType: "screenshot",
     brandColor: "#ea580c"
   },
   {
@@ -187,13 +193,97 @@ export const projects = [
     brandColor: "#4f46e5"
   },
   {
+    id: "ambara-store",
+    title: "Ambara Store",
+    subtitle: "Modern Fashion Retail & WhatsApp E-Commerce Platform",
+    category: "E-Commerce & Retail",
+    badge: "Live Production Store",
+    badgeType: "live",
+    isFeatured: true,
+    summary: "Mobile-first digital storefront engineered for apparel and fashion retail, featuring responsive product filtering, dynamic cart calculations, and instant WhatsApp Business checkout dispatch.",
+    problem: "Boutique fashion sellers in East Africa require an elegant storefront that presents apparel collections effectively while eliminating foreign payment gateway frictions.",
+    solution: "Engineered a high-speed fashion e-commerce storefront with intuitive catalog filtering, size selection, shopping cart management, and automated WhatsApp order dispatch.",
+    role: "Full-Stack Developer — built the frontend application, responsive layouts, shopping cart calculations, and localized WhatsApp checkout.",
+    tech: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "Context API", "WhatsApp Business Integration"],
+    features: [
+      "Interactive apparel catalog with size and style selection",
+      "Real-time cart state management with instant calculations",
+      "One-click WhatsApp order generation with formatted purchase details",
+      "100% responsive, mobile-first design with touch navigation"
+    ],
+    architecture: "React.js Single Page Application with centralized cart state, responsive grid layouts, and automated WhatsApp order message formatting.",
+    challenges: "Optimizing image rendering for image-dense fashion collections on mobile data networks.",
+    outcome: "Successfully deployed and operational at ambara-store.vercel.app.",
+    live: "https://ambara-store.vercel.app",
+    github: "https://github.com/mugishaisaie",
+    image: AmbaraImg,
+    previewType: "screenshot",
+    brandColor: "#ec4899"
+  },
+  {
+    id: "electrohub",
+    title: "ElectroHub",
+    subtitle: "Consumer Electronics Digital Storefront",
+    category: "E-Commerce & Retail",
+    badge: "Live Production Store",
+    badgeType: "live",
+    isFeatured: true,
+    summary: "Electronics e-commerce storefront featuring technical specification comparisons, stock status displays, and instant WhatsApp ordering for tech buyers.",
+    problem: "Electronics retailers need a structured catalog displaying granular device specifications (RAM, storage, processor) alongside transparent local pricing and quick ordering.",
+    solution: "Engineered a dedicated electronics retail storefront highlighting product comparison sheets, technical specifications, and one-tap checkout.",
+    role: "Full-Stack Developer — designed the component hierarchy, specification sheets, and responsive shopping cart.",
+    tech: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "Context API", "WhatsApp Checkout"],
+    features: [
+      "Granular technical specification sheets for electronics and gadgets",
+      "Dynamic search and category filtering for consumer tech",
+      "Real-time shopping cart and delivery calculations",
+      "Direct WhatsApp checkout dispatch"
+    ],
+    architecture: "Component-driven React architecture with custom filtering hooks and optimized asset delivery.",
+    challenges: "Presenting detailed technical specs clearly on small mobile screens without clutter.",
+    outcome: "Deployed live storefront serving consumer electronics shoppers.",
+    live: "https://github.com/mugishaisaie",
+    github: "https://github.com/mugishaisaie",
+    image: ElectroHubImg,
+    previewType: "screenshot",
+    brandColor: "#8b5cf6"
+  },
+  {
+    id: "mitech-hub-platform",
+    title: "MITECH HUB Platform",
+    subtitle: "Software Engineering & Digital Agency Portal",
+    category: "Flagship & Commercial",
+    badge: "Live Commercial Platform",
+    badgeType: "live",
+    isFeatured: true,
+    summary: "Central digital agency platform for MITECH HUB (mitechhubhq.com), showcasing full-service software development, tech education programs, and commercial project delivery.",
+    problem: "Potential commercial clients and tech students need a single trustworthy platform to explore digital engineering services, portfolio case studies, and training programs.",
+    solution: "Architected a comprehensive agency portal communicating engineering capabilities, service offerings, client workflows, and educational academies.",
+    role: "Founder & Lead Architect — designed the complete brand identity, system architecture, deployment pipeline, and hosting on custom DNS.",
+    tech: ["Full-Stack Architecture", "React.js", "Tailwind CSS", "Vercel", "Namecheap DNS & SSL"],
+    features: [
+      "Commercial software development services showcase",
+      "Digital consulting and tech academy information",
+      "Interactive inquiry and project consultation workflows",
+      "Production deployment with SSL and custom domain DNS routing"
+    ],
+    architecture: "High-performance SPA with modular sections, optimized Core Web Vitals, and secure hosting.",
+    challenges: "Balancing client acquisition conversion with educational course offerings.",
+    outcome: "Live at mitechhubhq.com as the official agency platform.",
+    live: "https://mitechhubhq.com",
+    github: "https://github.com/mugishaisaie",
+    image: MitechHubImg,
+    previewType: "screenshot",
+    brandColor: "#2563eb"
+  },
+  {
     id: "tura-system",
     title: "Tura System",
     subtitle: "Real Estate & Property Discovery Platform",
     category: "Flagship & Commercial",
-    badge: "Interactive Prototype",
+    badge: "Interactive Showcase",
     badgeType: "prototype",
-    isFeatured: true,
+    isFeatured: false,
     summary: "Modern real estate discovery platform tailored for Rwandan property seekers and landlords, featuring multi-parameter property filtering and direct inquiry workflows.",
     problem: "Finding verified rental apartments, commercial spaces, and residential homes in Rwanda typically relies on fragmented informal agents with zero pricing transparency.",
     solution: "Designed and built a centralized discovery platform showcasing verified properties with granular specs, location filters, price comparisons, and direct landlord inquiry options.",
@@ -210,37 +300,9 @@ export const projects = [
     outcome: "High-fidelity real estate platform prototype engineered for Rwanda's property market.",
     live: "https://github.com/mugishaisaie",
     github: "https://github.com/mugishaisaie",
-    image: null,
-    previewType: "branded-mockup",
+    image: TuraImg,
+    previewType: "screenshot",
     brandColor: "#059669"
-  },
-  {
-    id: "ambara-electrohub",
-    title: "Ambara Store & ElectroHub",
-    subtitle: "Multi-Vertical Fashion & Electronics E-Commerce",
-    category: "E-Commerce & Retail",
-    badge: "Live Production Stores",
-    badgeType: "live",
-    isFeatured: false,
-    summary: "Mobile-first digital storefronts engineered for retail fashion (Ambara Store) and consumer electronics (ElectroHub) with product spec comparisons and instant WhatsApp order dispatch.",
-    problem: "Niche merchants selling clothes and electronics require distinct product presentation formats (apparel sizing vs electronic specs) without paying recurring high SaaS fees.",
-    solution: "Developed lightweight, high-speed storefronts with tailored catalog views, real-time cart calculations, and WhatsApp checkout integration.",
-    role: "Full-Stack Developer — built both storefront systems, custom product comparison cards, and frictionless checkout flows.",
-    tech: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "Context API", "WhatsApp Business Integration"],
-    features: [
-      "Tailored product specification sheets for electronics and apparel",
-      "Real-time cart state management with instant discount and total calculations",
-      "One-click WhatsApp order generation with formatted purchase details",
-      "Ultra-fast loading with zero bloated external scripts"
-    ],
-    architecture: "State management handled via React Context API, modular component libraries, and utility helper functions for currency formatting and order compilation.",
-    challenges: "Optimizing image rendering and load speeds for image-dense catalogs on mobile connections.",
-    outcome: "Successfully deployed multi-vertical stores providing immediate digital sales channels.",
-    live: "https://ambara-store.vercel.app",
-    github: "https://github.com/mugishaisaie",
-    image: null,
-    previewType: "branded-mockup",
-    brandColor: "#8b5cf6"
   },
   {
     id: "my-pizzas-shop",

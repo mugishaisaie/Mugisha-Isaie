@@ -110,6 +110,17 @@ export default function CaseStudyModal({ project, isOpen, onClose }) {
           {/* Scrollable Body */}
           <div className="p-6 overflow-y-auto space-y-6 text-stone-800 dark:text-stone-200 text-sm sm:text-base leading-relaxed">
             
+            {/* Visual Screenshot Preview */}
+            {project.image && (
+              <div className="rounded-xl overflow-hidden border border-stone-200 dark:border-stone-800 shadow-sm max-h-72 bg-stone-100 dark:bg-stone-950">
+                <img
+                  src={project.image}
+                  alt={`${project.title} interface preview`}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+            )}
+
             {/* The Problem & Need */}
             <div className="bg-stone-50 dark:bg-stone-800/40 p-5 rounded-xl border border-stone-200/80 dark:border-stone-800">
               <h3 className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-2">
